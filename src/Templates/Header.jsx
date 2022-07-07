@@ -19,24 +19,30 @@ import {
     chakra,
     VisuallyHidden
   } from '@chakra-ui/react';
+  import {Link as RouterLink} from "react-router-dom";
   import Logo from '../Assets/Images/logo.png';
 
     
   const NAV_ITEMS = [
     {
-      label: 'Home'
+      label: 'Home',
+      to:''
     },
     {
-      label: 'Recipes'
+      label: 'Recipes',
+      to:'recipes'
     },
     {
       label: 'Blogs',
+      to:'blogs'
     },
     {
       label: 'Contact',
+      to:'contact'
     },
     {
       label: 'About us',
+      to:'aboutus'
     },
   ];
 
@@ -47,7 +53,7 @@ import {
   }: {
     children: ReactNode;
     label: string;
-    href: string;
+    to:String;
   }) => {
     return (
       <chakra.button
@@ -135,9 +141,10 @@ import {
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
-                <Link
+                <Link 
+                  as={RouterLink}
                   p={2}
-                  href={navItem.href ?? '#'}
+                  to={"/"+navItem.to}
                   fontSize={'sm'}
                   fontWeight={600}
                   color={linkColor}
@@ -165,7 +172,7 @@ import {
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
-                <Link
+                <Link 
                   p={2}
                   href={navItem.href ?? '#'}
                   fontSize={'sm'}

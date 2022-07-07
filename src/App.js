@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './Templates/Header';
-import Homepage from './Mycomponents/Homepage';
 import Footer from './Templates/Footer';
+import Myroutes from './Myroutes/Router';
 
 export default function App() {
   return (
     <div className="App">
       <Header />
-      <Homepage />
+      <Myroutes/>
       <Footer />
     </div>
   );
