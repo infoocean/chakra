@@ -42,77 +42,296 @@ export default function Instragramsection() {
       <Box p={5}>
         <SimpleGrid  columns={[2, null, 4]} spacing="20px">
           <Box bg={useColorModeValue('white', 'gray.900')}>
-            <Flex p={2}>
-              <Box>
-                <Stack direction={'row'} spacing={2} align={'center'}>
-                  <Avatar
-                    w={10}
-                    h={10}
-                    src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
-                    alt={'Author'}
-                  />
-                  <Stack direction={'column'} fontSize={'sm'}>
-                    <Text fontWeight={700}> Foodieland </Text>
-                    <Text className='location'>Tokyo, Japan</Text>
+              <Flex p={2}>
+                <Box>
+                  <Stack direction={'row'} spacing={2} align={'center'}>
+                    <Avatar
+                      w={10}
+                      h={10}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                    <Stack direction={'column'} fontSize={'sm'}>
+                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i> </Text>
+                      <Text className='location'>Tokyo, Japan</Text>
+                    </Stack>
                   </Stack>
+                </Box>
+                <Spacer />
+                <Box>
+                  <Stack direction={'column'} fontSize={'sm'}>
+                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                  </Stack>
+                </Box>
+              </Flex>
+              <Box
+                w={'full'}
+                bg={useColorModeValue('white', 'gray.900')}
+                boxShadow={'2xl'}
+                rounded={'md'}
+                overflow={'hidden'}
+              >
+                <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
+                  <Image src={IMAGE} layout={'fill'} />
+                </Box>
+                <Stack p={2}>
+                  <Flex>
+                    <Box>
+                      <Stack direction={'row'} spacing={2} align={'center'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                      </Stack>
+                    </Box>
+                    <Spacer />
+                    <Box>
+                      <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                      </Stack>
+                    </Box>
+                  </Flex>
+                </Stack>
+                <Stack p={1.5}>
+                  <Text fontSize={'sm'} as="span">
+                    {' '}
+                    <Avatar
+                      w={5}
+                      h={5}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                  {''} Liked By <b>Shub_sirts</b> and  <b>445</b>
+                  </Text>
+                </Stack>
+                <Stack pl={2} pr={1} direction={'row'} spacing={4} align={'center'}>
+                  <Text  fontSize={12}>
+                    <b>Foodieland.</b> Never miss meet. Never be late for one too. A Keep
+                    track.{' '}
+                  </Text>
+                </Stack>
+                <Stack  p={2} direction={'row'} spacing={2} align={'center'}>
+                  <Text fontSize={12} fontWeight={100}>September 10</Text>
                 </Stack>
               </Box>
-              <Spacer />
-              <Box>
-                <Stack direction={'column'} fontSize={'sm'}>
-                  <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+          </Box>
+          <Box bg={useColorModeValue('white', 'gray.900')}>
+              <Flex p={2}>
+                <Box>
+                  <Stack direction={'row'} spacing={2} align={'center'}>
+                    <Avatar
+                      w={10}
+                      h={10}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                    <Stack direction={'column'} fontSize={'sm'}>
+                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i></Text>
+                      <Text className='location'>Tokyo, Japan</Text>
+                    </Stack>
+                  </Stack>
+                </Box>
+                <Spacer />
+                <Box>
+                  <Stack direction={'column'} fontSize={'sm'}>
+                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                  </Stack>
+                </Box>
+              </Flex>
+              <Box
+                w={'full'}
+                bg={useColorModeValue('white', 'gray.900')}
+                boxShadow={'2xl'}
+                rounded={'md'}
+                overflow={'hidden'}
+              >
+                <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
+                  <Image src={IMAGE} layout={'fill'} />
+                </Box>
+                <Stack p={2}>
+                  <Flex>
+                    <Box>
+                      <Stack direction={'row'} spacing={2} align={'center'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                      </Stack>
+                    </Box>
+                    <Spacer />
+                    <Box>
+                      <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                      </Stack>
+                    </Box>
+                  </Flex>
+                </Stack>
+                <Stack p={1.5}>
+                  <Text fontSize={'sm'} as="span">
+                    {' '}
+                    <Avatar
+                      w={5}
+                      h={5}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                  {''} Liked By <b>Shub_sirts</b> and  <b>445</b>
+                  </Text>
+                </Stack>
+                <Stack pl={2} pr={1} direction={'row'} spacing={4} align={'center'}>
+                  <Text  fontSize={12}>
+                    <b>Foodieland.</b> Never miss meet. Never be late for one too. A Keep
+                    track.{' '}
+                  </Text>
+                </Stack>
+                <Stack  p={2} direction={'row'} spacing={2} align={'center'}>
+                  <Text fontSize={12} fontWeight={100}>September 10</Text>
                 </Stack>
               </Box>
-            </Flex>
-            <Box
-              w={'full'}
-              bg={useColorModeValue('white', 'gray.900')}
-              boxShadow={'2xl'}
-              rounded={'md'}
-              overflow={'hidden'}
-            >
-              <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
-                <Image src={IMAGE} layout={'fill'} />
+          </Box>
+          <Box bg={useColorModeValue('white', 'gray.900')}>
+              <Flex p={2}>
+                <Box>
+                  <Stack direction={'row'} spacing={2} align={'center'}>
+                    <Avatar
+                      w={10}
+                      h={10}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                    <Stack direction={'column'} fontSize={'sm'}>
+                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i></Text>
+                      <Text className='location'>Tokyo, Japan</Text>
+                    </Stack>
+                  </Stack>
+                </Box>
+                <Spacer />
+                <Box>
+                  <Stack direction={'column'} fontSize={'sm'}>
+                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                  </Stack>
+                </Box>
+              </Flex>
+              <Box
+                w={'full'}
+                bg={useColorModeValue('white', 'gray.900')}
+                boxShadow={'2xl'}
+                rounded={'md'}
+                overflow={'hidden'}
+              >
+                <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
+                  <Image src={IMAGE} layout={'fill'} />
+                </Box>
+                <Stack p={2}>
+                  <Flex>
+                    <Box>
+                      <Stack direction={'row'} spacing={2} align={'center'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                      </Stack>
+                    </Box>
+                    <Spacer />
+                    <Box>
+                      <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                      </Stack>
+                    </Box>
+                  </Flex>
+                </Stack>
+                <Stack p={1.5}>
+                  <Text fontSize={'sm'} as="span">
+                    {' '}
+                    <Avatar
+                      w={5}
+                      h={5}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                  {''} Liked By <b>Shub_sirts</b> and  <b>445</b>
+                  </Text>
+                </Stack>
+                <Stack pl={2} pr={1} direction={'row'} spacing={4} align={'center'}>
+                  <Text  fontSize={12}>
+                    <b>Foodieland.</b> Never miss meet. Never be late for one too. A Keep
+                    track.{' '}
+                  </Text>
+                </Stack>
+                <Stack  p={2} direction={'row'} spacing={2} align={'center'}>
+                  <Text fontSize={12} fontWeight={100}>September 10</Text>
+                </Stack>
               </Box>
-              <Stack p={2}>
-                <Flex>
-                  <Box>
-                    <Stack direction={'row'} spacing={2} align={'center'}>
-                      <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
-                      <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
-                      <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+          </Box>
+          <Box bg={useColorModeValue('white', 'gray.900')}>
+              <Flex p={2}>
+                <Box>
+                  <Stack direction={'row'} spacing={2} align={'center'}>
+                    <Avatar
+                      w={10}
+                      h={10}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                    <Stack direction={'column'} fontSize={'sm'}>
+                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i></Text>
+                      <Text className='location'>Tokyo, Japan</Text>
                     </Stack>
-                  </Box>
-                  <Spacer />
-                  <Box>
-                    <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                      <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
-                    </Stack>
-                  </Box>
-                </Flex>
-              </Stack>
-              <Stack p={1.5}>
-                <Text fontSize={'sm'} as="span">
-                  {' '}
-                  <Avatar
-                    w={5}
-                    h={5}
-                    src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
-                    alt={'Author'}
-                  />
-                {''} Liked By <b>Shub_sirts</b> and  <b>445</b>
-                </Text>
-              </Stack>
-              <Stack pl={2} pr={1} direction={'row'} spacing={4} align={'center'}>
-                <Text  fontSize={12}>
-                  <b>Foodieland.</b> Never miss meet. Never be late for one too. A Keep
-                  track.{' '}
-                </Text>
-              </Stack>
-              <Stack  p={2} direction={'row'} spacing={2} align={'center'}>
-                <Text fontSize={12} fontWeight={100}>September 10</Text>
-              </Stack>
-            </Box>
+                  </Stack>
+                </Box>
+                <Spacer />
+                <Box>
+                  <Stack direction={'column'} fontSize={'sm'}>
+                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                  </Stack>
+                </Box>
+              </Flex>
+              <Box
+                w={'full'}
+                bg={useColorModeValue('white', 'gray.900')}
+                boxShadow={'2xl'}
+                rounded={'md'}
+                overflow={'hidden'}
+              >
+                <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
+                  <Image src={IMAGE} layout={'fill'} />
+                </Box>
+                <Stack p={2}>
+                  <Flex>
+                    <Box>
+                      <Stack direction={'row'} spacing={2} align={'center'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                      </Stack>
+                    </Box>
+                    <Spacer />
+                    <Box>
+                      <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                      </Stack>
+                    </Box>
+                  </Flex>
+                </Stack>
+                <Stack p={1.5}>
+                  <Text fontSize={'sm'} as="span">
+                    {' '}
+                    <Avatar
+                      w={5}
+                      h={5}
+                      src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                      alt={'Author'}
+                    />
+                  {''} Liked By <b>Shub_sirts</b> and  <b>445</b>
+                  </Text>
+                </Stack>
+                <Stack pl={2} pr={1} direction={'row'} spacing={4} align={'center'}>
+                  <Text  fontSize={12}>
+                    <b>Foodieland.</b> Never miss meet. Never be late for one too. A Keep
+                    track.{' '}
+                  </Text>
+                </Stack>
+                <Stack  p={2} direction={'row'} spacing={2} align={'center'}>
+                  <Text fontSize={12} fontWeight={100}>September 10</Text>
+                </Stack>
+              </Box>
           </Box>
         </SimpleGrid>
         <Stack
