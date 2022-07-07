@@ -1,3 +1,7 @@
 .location{
     margin-top: 0rem !important;
 }
+input {
+    
+    border: 0px solid !important;
+}

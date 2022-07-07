@@ -21,7 +21,7 @@ const IMAGE =
 
 export default function Instragramsection() {
   return (
-    <Container mt={20} mb={6} maxW="6xl" bgGradient='linear(to-b, #f0f4f7, #dcf1fa)' > 
+    <Container mt={20} mb={6} maxW="6xl" bgGradient="linear(to-b, white.0, blue.100)" > 
       <Stack
         textAlign={'center'}
         align={'center'}

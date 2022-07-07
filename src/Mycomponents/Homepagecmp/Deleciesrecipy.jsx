@@ -74,8 +74,8 @@ export default function Deleciesrecipy() {
                 rounded="lg"
                 position="relative"
               >
-                <Box bg={'gray.100'} pos={'relative'}>
-                  <Image src={imgpath + "/" + value.recipeId.image} layout={'fill'} />
+                <Box bg={'gray.100'} pos={'relative'} maxW='400px' max="400px" > 
+                  <Image   src={imgpath + "/" + value.recipeId.image} layout={'fill'} />
                 </Box>
                 <Stack p={2}>
                   <Heading

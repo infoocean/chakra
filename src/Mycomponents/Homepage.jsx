@@ -5,6 +5,7 @@ import Myreceipies from '../Mycomponents/Homepagecmp/Receipes';
 //import Homepageslider from '../Mycomponents/Homepagecmp/Homepageslider';
 import Banner from '../Mycomponents/Homepagecmp/Banner';
 import Instragramsection from '../Mycomponents/Homepagecmp/Instragrammedia';
+import { Inboxemail } from './Homepagecmp/Banner2';
 
 export default function Homepage() {
   return (
@@ -15,6 +16,7 @@ export default function Homepage() {
       <Myreceipies />
       <Instragramsection />
       <Deleciesrecipy />
+      <Inboxemail/>
     </>
   );
 }
