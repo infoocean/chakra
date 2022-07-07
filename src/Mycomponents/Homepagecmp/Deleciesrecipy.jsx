@@ -44,7 +44,7 @@ export default function Deleciesrecipy() {
   }
 
   return (
-    <Container maxW="container.lg" mt={6} mb={6}>
+    <Container maxW="6xl" mt={20} mb={6}>
       {/*<Flex>
         <Box>
           <Text fontSize="3xl" fontWeight="900">
@@ -64,19 +64,15 @@ export default function Deleciesrecipy() {
           <Text w={540}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            tempor incididunt ut labore et dolore magna aliqua.
           </Text>
         </Flex>
-      <SimpleGrid mt={6} columns={[2, null, 3]} spacing="30px">
-        
+      <SimpleGrid mt={20} columns={[2, null, 3]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
-            <Box>
               <Box
-                w={'full'}
-                bg="#cceefc" 
-                boxShadow={'2xl'}
-                rounded={'md'}
-                overflow={'hidden'}
+                rounded="lg"
+                position="relative"
               >
                 <Box bg={'gray.100'} pos={'relative'}>
                   <Image src={imgpath + "/" + value.recipeId.image} layout={'fill'} />
@@ -94,7 +90,6 @@ export default function Deleciesrecipy() {
                   <Text fontWeight={600}><i class="fa-solid fa-utensils"></i>  Spoons</Text>
                 </Stack>
               </Box>
-            </Box>
           );
         })}
       </SimpleGrid>

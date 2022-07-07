@@ -75,7 +75,7 @@ import {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Container maxW="container.lg" pt={4} pb={5}>
+        <Container pt={4} pb={5} maxW="6xl">
           <Box>
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}

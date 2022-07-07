@@ -22,7 +22,7 @@ export default function Banner() {
   function GetBannerdata() {}
 
   return (
-    <Container mt={6} mb={6} maxW="container.lg">
+    <Container mt={6} mb={6} maxW="6xl">
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -32,8 +32,8 @@ export default function Banner() {
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1}
-            fontWeight={700}
-            fontSize={{ base: '3xl', sm: '3xl', lg: '4xl' }}
+            fontWeight={800}
+            fontSize={{ base: '2xl', sm: '3xl', lg: '5xl' }}
           >
             <Text
               as={'span'}
@@ -58,10 +58,9 @@ export default function Banner() {
           <Stack direction={{ base: 'column', sm: 'row' }}>
             <Button
               size={'lg'}
-              fontWeight={500}
+              fontWeight={800}
               px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
+              bg="#1b1d1f"  color="white"
               _hover={{ bg: 'red.500' }}
             >
               Lern More

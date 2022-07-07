@@ -50,12 +50,11 @@ export default function Myreceipies() {
   }
 
   return (
-    <Container maxW="container.lg">
+    <Container maxW="6xl"> 
         <Stack
           textAlign={'center'}
           align={'center'}
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 20, md: 28 }}>
+          py={{ base: 10, md: 20 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}>
@@ -99,7 +98,7 @@ export default function Myreceipies() {
                       {value.recipeId.title}
                     </Heading>
                   </Stack>
-                  <Stack p={2} direction={'row'} spacing={6} align={'center'}>
+                  <Stack p={2}  direction={'row'} spacing={6} align={'center'}>
                     <Text fontWeight={600}><i class="fa-solid fa-stopwatch"></i> 30 Minuts </Text>
                     <Text fontWeight={600}><i class="fa-solid fa-utensils"></i>  Snacks</Text>
                 </Stack>

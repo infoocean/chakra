@@ -21,15 +21,15 @@ const IMAGE =
 
 export default function Instragramsection() {
   return (
-    <Container mt={20} mb={6} maxW="container.lg" bgGradient='linear(to-b, #f5f8fa, #dcf1fa)' > 
+    <Container mt={20} mb={6} maxW="6xl" bgGradient='linear(to-b, #f0f4f7, #dcf1fa)' > 
       <Stack
         textAlign={'center'}
         align={'center'}
-        spacing={{ base: 5, md: 10 }}
-        py={{ base: 15, md: 15 }}
+       
+        py={{ base: 10, md:45}}
       >
         <Heading
-          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+          fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           fontWeight={800}
         >
           Check out @foodieland on instragram
@@ -40,7 +40,7 @@ export default function Instragramsection() {
         </Text>
       </Stack>
       <Box p={5}>
-        <SimpleGrid  columns={[1, null, 4]} spacing="20px">
+        <SimpleGrid  columns={[2, null, 4]} spacing="20px">
           <Box bg={useColorModeValue('white', 'gray.900')}>
             <Flex p={2}>
               <Box>
@@ -122,11 +122,12 @@ export default function Instragramsection() {
           py={{ base: 10, md: 15 }}
         >
           <Heading
-            fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
+            fontSize={{ base: '2xl', sm: '3xl', md: '6xl' }}
             fontWeight={700}
-            
           >
-            <Button bg="#1b1d1f"  color="white">View For Instragram  <Text>  <i class="fa-brands fa-instagram"></i></Text> </Button>
+            <Button bg="#1b1d1f" _hover={{ bg: 'red.500'}} color="white">View For Instragram {'    '} <Text> 
+                <b><i class="fa-brands fa-instagram"></i></b></Text> 
+             </Button>
           </Heading>
         </Stack>
       </Box>

@@ -16,7 +16,7 @@ import {
 
 export default function Homepageslider() {
   return (
-    <Container mt={6} mb={6} maxW="container.lg">
+    <Container mt={6} mb={6} maxW="6xl">
       Homepageslider
     </Container>
   );

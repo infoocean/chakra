@@ -46,7 +46,7 @@ import {
   
   export default function Footer() {
     return (
-      <Container maxW="container.lg" pt={6} pb={6} bg={useColorModeValue('gray.50', 'gray.900')}>
+      <Container maxW="6xl" pt={6} pb={6} bg={useColorModeValue('gray.50', 'gray.900')}>
         <Box
             g={useColorModeValue('gray.50', 'gray.900')}
             color={useColorModeValue('gray.700', 'gray.200')}>
