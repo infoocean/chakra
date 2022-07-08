@@ -80,6 +80,7 @@ export default function Banner() {
             boxShadow={'1xl'}
             width={'full'}
             overflow={'hidden'}
+            bgGradient="linear(to-b, white.0, blue.100)"
           >
             <Image
               alt={'Hero Image'}
@@ -88,7 +89,7 @@ export default function Banner() {
               w={'100%'}
               h={'100%'}
               src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                'https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/cooker%2Fimage-220.png?alt=media&token=acdfc1a1-ed68-4828-a969-cf76a35273d6%22'
               }
             />
           </Box>

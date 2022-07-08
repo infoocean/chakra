@@ -49,14 +49,14 @@ export default function Categeries() {
       <Flex>
         <Box>
           <Text fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }} fontWeight="800">
-            Categeries
+            Categories 
           </Text>
         </Box>
         <Spacer />
         <Box>
           <Button bg="#cceefc" size="lg">
             {' '}
-            View All Categaries
+            View All Categories 
           </Button>
         </Box>
       </Flex>

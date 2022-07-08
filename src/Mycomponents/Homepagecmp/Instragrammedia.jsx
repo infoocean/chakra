@@ -14,10 +14,14 @@ import {
   Spacer,
   Box,
   Center,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'; 
 
-const IMAGE =
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw4ompJ3n-M2UQZv4jerf8FwgoPXfMetcM0Q&usqp=CAU';
+  const image={
+    firstimg:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw4ompJ3n-M2UQZv4jerf8FwgoPXfMetcM0Q&usqp=CAU",
+    secondimg:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBCMYppD4onrIdCWkrDyZP0x_AvyhHdlgj1VwM9HlgSW2Vj45E8a_cIW13r1fAQtduCEc&usqp=CAU",
+    thirdimg:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw4ompJ3n-M2UQZv4jerf8FwgoPXfMetcM0Q&usqp=CAU",
+    fourthimg:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBCMYppD4onrIdCWkrDyZP0x_AvyhHdlgj1VwM9HlgSW2Vj45E8a_cIW13r1fAQtduCEc&usqp=CAU",
+  }
 
 export default function Instragramsection() {
   return (
@@ -72,7 +76,7 @@ export default function Instragramsection() {
                 overflow={'hidden'}
               >
                 <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
-                  <Image src={IMAGE} layout={'fill'} />
+                  <Image src={image.firstimg} layout={'fill'} />
                 </Box>
                 <Stack p={2}>
                   <Flex>
@@ -145,7 +149,7 @@ export default function Instragramsection() {
                 overflow={'hidden'}
               >
                 <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
-                  <Image src={IMAGE} layout={'fill'} />
+                  <Image src={image.secondimg} layout={'fill'} /> 
                 </Box>
                 <Stack p={2}>
                   <Flex>
@@ -218,7 +222,7 @@ export default function Instragramsection() {
                 overflow={'hidden'}
               >
                 <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
-                  <Image src={IMAGE} layout={'fill'} />
+                  <Image src={image.thirdimg} layout={'fill'} />
                 </Box>
                 <Stack p={2}>
                   <Flex>
@@ -291,7 +295,7 @@ export default function Instragramsection() {
                 overflow={'hidden'}
               >
                 <Box bg={useColorModeValue('white', 'gray.900')} layout={'fill'} p={2} pos={'relative'}>
-                  <Image src={IMAGE} layout={'fill'} />
+                  <Image src={image.fourthimg} layout={'fill'} ></Image>
                 </Box>
                 <Stack p={2}>
                   <Flex>
