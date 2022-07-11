@@ -73,9 +73,34 @@ export default function Deleciesrecipy() {
               <Box
                 rounded="lg"
                 position="relative"
+                role={'group'}
+                w={'full'}
+                h="300px"
+                bg={useColorModeValue('white', 'gray.800')}
+                boxShadow={'2xl'}
+                rounded={'lg'}
+                pos={'relative'}
+                zIndex={1}
               >
-                <Box bg={'gray.100'} pos={'relative'} maxW='400px' max="400px" > 
-                  <Image   src={imgpath + "/" + value.recipeId.image} layout={'fill'} />
+                <Box  rounded={'lg'}
+                  pos={'relative'}
+                  _after={{
+                    transition: 'all .3s ease',
+                    content: '""',
+                    w: 'full',
+                    h: 'full',
+                    pos: 'absolute',
+                    top: 5,
+                    left: 0,
+                    filter: 'blur(15px)',
+                    zIndex: -1,
+                  }}
+                  _groupHover={{
+                    _after: {
+                      filter: 'blur(20px)',
+                    },
+                  }} bg={'gray.100'} pos={'relative'} maxW='400px' max="400px" > 
+                  <Image h="200px" objectFit={'cover'} w='full' src={imgpath + "/" + value.recipeId.image} layout={'fill'} />
                 </Box>
                 <Stack p={2}>
                   <Heading
