@@ -9,6 +9,7 @@ import {
   Image,
   Flex,
   Spacer,
+  Circle,
   useColorModeValue,
   SimpleGrid,
 } from '@chakra-ui/react';
@@ -67,22 +68,23 @@ export default function Deleciesrecipy() {
             tempor incididunt ut labore et dolore magna aliqua.
           </Text>
         </Flex>
-      <SimpleGrid mt={20} columns={[2, null, 3]} spacing="30px">
+      <SimpleGrid mt={20} columns={[2, null, 4]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
-              <Box
+              <Box 
                 rounded="lg"
                 position="relative"
                 role={'group'}
                 w={'full'}
-                h="300px"
-                bg={useColorModeValue('white', 'gray.800')}
-                boxShadow={'2xl'}
+                h="250px"
+                bgGradient="linear(to-b, white.0, #ceeaed)" 
+                boxShadow={'1xl'}
                 rounded={'lg'}
                 pos={'relative'}
                 zIndex={1}
               >
-                <Box  rounded={'lg'}
+                <Box  
+                  rounded={'lg'}
                   pos={'relative'}
                   _after={{
                     transition: 'all .3s ease',
@@ -100,7 +102,15 @@ export default function Deleciesrecipy() {
                       filter: 'blur(20px)',
                     },
                   }} bg={'gray.100'} pos={'relative'} maxW='400px' max="400px" > 
-                  <Image h="200px" objectFit={'cover'} w='full' src={imgpath + "/" + value.recipeId.image} layout={'fill'} />
+                  <Box 
+                    position="absolute"
+                    top={2}
+                    right={2}
+                    color="Tomato"
+                    >
+                    <i className="fa-solid fa-heart"></i>
+                    </Box>
+                  <Image h="150px" objectFit={'cover'} w='full' src={imgpath + "/" + value.recipeId.image} layout={'fill'} />
                 </Box>
                 <Stack p={2}>
                   <Heading
@@ -111,8 +121,8 @@ export default function Deleciesrecipy() {
                   </Heading>
                 </Stack>
                 <Stack p={2} direction={'row'} spacing={4} align={'center'}>
-                  <Text fontWeight={600}><i class="fa-solid fa-stopwatch"></i> Timer</Text>
-                  <Text fontWeight={600}><i class="fa-solid fa-utensils"></i>  Spoons</Text>
+                  <Text fontWeight={600}><i className="fa-solid fa-stopwatch"></i> Timer</Text>
+                  <Text fontWeight={600}><i className="fa-solid fa-utensils"></i>  Spoons</Text>
                 </Stack>
               </Box>
           );

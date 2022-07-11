@@ -56,7 +56,7 @@ export default function Instragramsection() {
                       alt={'Author'}
                     />
                     <Stack direction={'column'} fontSize={'sm'}>
-                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i> </Text>
+                      <Text fontWeight={700}> Foodieland <i className="fa-solid fa-circle-check"></i> </Text>
                       <Text className='location'>Tokyo, Japan</Text>
                     </Stack>
                   </Stack>
@@ -64,7 +64,7 @@ export default function Instragramsection() {
                 <Spacer />
                 <Box>
                   <Stack direction={'column'} fontSize={'sm'}>
-                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                    <Text fontWeight={700}><i className="fa-solid  fa-ellipsis-vertical"></i></Text>
                   </Stack>
                 </Box>
               </Flex>
@@ -82,15 +82,15 @@ export default function Instragramsection() {
                   <Flex>
                     <Box>
                       <Stack direction={'row'} spacing={2} align={'center'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-paper-plane"></i></Text>
                       </Stack>
                     </Box>
                     <Spacer />
                     <Box>
                       <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-bookmark"></i></Text>
                       </Stack>
                     </Box>
                   </Flex>
@@ -129,7 +129,7 @@ export default function Instragramsection() {
                       alt={'Author'}
                     />
                     <Stack direction={'column'} fontSize={'sm'}>
-                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i></Text>
+                      <Text fontWeight={700}> Foodieland <i className="fa-solid fa-circle-check"></i></Text>
                       <Text className='location'>Tokyo, Japan</Text>
                     </Stack>
                   </Stack>
@@ -137,7 +137,7 @@ export default function Instragramsection() {
                 <Spacer />
                 <Box>
                   <Stack direction={'column'} fontSize={'sm'}>
-                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                    <Text fontWeight={700}><i className="fa-solid  fa-ellipsis-vertical"></i></Text>
                   </Stack>
                 </Box>
               </Flex>
@@ -155,15 +155,15 @@ export default function Instragramsection() {
                   <Flex>
                     <Box>
                       <Stack direction={'row'} spacing={2} align={'center'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-paper-plane"></i></Text>
                       </Stack>
                     </Box>
                     <Spacer />
                     <Box>
                       <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-bookmark"></i></Text>
                       </Stack>
                     </Box>
                   </Flex>
@@ -202,7 +202,7 @@ export default function Instragramsection() {
                       alt={'Author'}
                     />
                     <Stack direction={'column'} fontSize={'sm'}>
-                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i></Text>
+                      <Text fontWeight={700}> Foodieland <i className="fa-solid fa-circle-check"></i></Text>
                       <Text className='location'>Tokyo, Japan</Text>
                     </Stack>
                   </Stack>
@@ -210,7 +210,7 @@ export default function Instragramsection() {
                 <Spacer />
                 <Box>
                   <Stack direction={'column'} fontSize={'sm'}>
-                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                    <Text fontWeight={700}><i className="fa-solid  fa-ellipsis-vertical"></i></Text>
                   </Stack>
                 </Box>
               </Flex>
@@ -228,15 +228,15 @@ export default function Instragramsection() {
                   <Flex>
                     <Box>
                       <Stack direction={'row'} spacing={2} align={'center'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-paper-plane"></i></Text>
                       </Stack>
                     </Box>
                     <Spacer />
                     <Box>
                       <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-bookmark"></i></Text>
                       </Stack>
                     </Box>
                   </Flex>
@@ -283,7 +283,7 @@ export default function Instragramsection() {
                 <Spacer />
                 <Box>
                   <Stack direction={'column'} fontSize={'sm'}>
-                    <Text fontWeight={700}><i class="fa-solid  fa-ellipsis-vertical"></i></Text>
+                    <Text fontWeight={700}><i className="fa-solid  fa-ellipsis-vertical"></i></Text>
                   </Stack>
                 </Box>
               </Flex>
@@ -301,15 +301,15 @@ export default function Instragramsection() {
                   <Flex>
                     <Box>
                       <Stack direction={'row'} spacing={2} align={'center'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-heart"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-comment"></i></Text>
-                        <Text fontWeight={700}><i class="fa-solid fa-paper-plane"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-heart"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-comment"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-paper-plane"></i></Text>
                       </Stack>
                     </Box>
                     <Spacer />
                     <Box>
                       <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                        <Text fontWeight={700}><i class="fa-solid fa-bookmark"></i></Text>
+                        <Text fontWeight={700}><i className="fa-solid fa-bookmark"></i></Text>
                       </Stack>
                     </Box>
                   </Flex>
@@ -349,7 +349,7 @@ export default function Instragramsection() {
             fontWeight={700}
           >
             <Button bg="#1b1d1f" _hover={{ bg: 'red.500'}} color="white">View For Instragram {'    '} <Text> 
-                <b><i class="fa-brands fa-instagram"></i></b></Text> 
+                <b><i className="fa-brands fa-instagram"></i></b></Text> 
              </Button>
           </Heading>
         </Stack>

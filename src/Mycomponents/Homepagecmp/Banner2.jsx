@@ -7,7 +7,7 @@ export function Inboxemail() {
   return (
     <Container maxW="6xl" mt={20} mb={20}>
     <Flex>
-      <Flex bgGradient="linear(to-b, white.0, blue.100)" borderRadius={30}>
+      <Flex bgGradient="linear(to-b, #e4f0f7, blue.100)" borderRadius={30}>
         <Box>
           <Image src={Subs1} />
         </Box>

@@ -99,7 +99,7 @@ import {
                 <IconButton
                     onClick={onToggle}
                     icon={
-                    isOpen ? <i class="fa-solid fa-xmark" w={3} h={3}></i>: <i w={5} h={5} class="fa-solid fa-bars"></i>
+                    isOpen ? <i className="fa-solid fa-xmark" w={3} h={3}></i>: <i w={5} h={5} className="fa-solid fa-bars"></i>
                     }
                     variant={'ghost'}
                     aria-label={'Toggle Navigation'}
@@ -116,13 +116,13 @@ import {
                 </Flex>
                 <Stack direction={'row'} spacing={6}>
                     <SocialButton label={'FaFacebook'} href={'#'}>
-                      <i class="fa-brands fa-facebook-f"></i>
+                      <i className="fa-brands fa-facebook-f"></i>
                     </SocialButton>
                   <SocialButton label={'FaTwitter'} href={'#'}>
-                  <i class="fa-brands fa-twitter"></i>
+                  <i className="fa-brands fa-twitter"></i>
                   </SocialButton>
                   <SocialButton label={'Instagram'} href={'#'}>
-                  <i class="fa-brands fa-instagram"></i>
+                  <i className="fa-brands fa-instagram"></i>
                   </SocialButton>
                 </Stack>
             </Flex>

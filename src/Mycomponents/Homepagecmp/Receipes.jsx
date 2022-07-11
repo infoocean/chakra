@@ -99,8 +99,8 @@ export default function Myreceipies() {
                     </Heading>
                   </Stack>
                   <Stack p={2}  direction={'row'} spacing={6} align={'center'}>
-                    <Text fontWeight={600}><i class="fa-solid fa-stopwatch"></i> 30 Minuts </Text>
-                    <Text fontWeight={600}><i class="fa-solid fa-utensils"></i>  Snacks</Text>
+                    <Text fontWeight={600}><i className="fa-solid fa-stopwatch"></i> 30 Minuts </Text>
+                    <Text fontWeight={600}><i className="fa-solid fa-utensils"></i>  Snacks</Text>
                 </Stack>
               </Box>
             );

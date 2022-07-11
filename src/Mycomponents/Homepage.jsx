@@ -6,14 +6,13 @@ import Myreceipies from '../Mycomponents/Homepagecmp/Receipes';
 import Banner from '../Mycomponents/Homepagecmp/Banner';
 import Instragramsection from '../Mycomponents/Homepagecmp/Instragrammedia';
 import { Inboxemail } from './Homepagecmp/Banner2';
-import Carousel from './Homepagecmp/Mytext';
+
 
 export default function Homepage() {
   return (
     <>
       {/*<Homepageslider />*/}
       <Categeries />
-      <Carousel/>
       <Banner />
       <Myreceipies />
       <Instragramsection />

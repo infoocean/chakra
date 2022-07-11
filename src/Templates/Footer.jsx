@@ -101,13 +101,13 @@ import {
             <Text>© 2020 Flowbase, Powered By <Text as="span" color='tomato' fontWeight={600}> Webflow </Text></Text>
             <Stack direction={'row'} spacing={6}>
               <SocialButton label={'FaFacebook'} href={'#'}>
-                  <i class="fa-brands fa-facebook-f"></i>
+                  <i className="fa-brands fa-facebook-f"></i>
               </SocialButton>
               <SocialButton label={'FaTwitter'} href={'#'}>
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
-              <i class="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram"></i>
               </SocialButton>
             </Stack>
           </Container>
