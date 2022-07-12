@@ -61,7 +61,6 @@ export default function Directions() {
                     w={'full'}
                     bg={useColorModeValue('white', 'gray.900')}
                     overflow={'hidden'}
-                    h="500px"
                     rounded="lg"
                     position="relative"
                     role={'group'}

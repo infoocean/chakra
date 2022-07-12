@@ -28,7 +28,7 @@ export function Inboxemail() {
           </Stack>
         </Box>
         <Box>
-          <Image mt={135} src={Subs2} />
+          <Image mt={135} src={Subs2}  borderRadius={30}/>
         </Box>
       </Flex>
     </Flex>

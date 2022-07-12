@@ -44,6 +44,10 @@ import {
       label: 'About us',
       to:'aboutus'
     },
+    {
+      label: 'Blog Post',
+      to:'blogpost'
+    },
   ];
 
   const SocialButton = ({
