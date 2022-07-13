@@ -49,7 +49,7 @@ export default function Myreceipies() {
         <Stack
           textAlign={'center'}
           align={'center'}
-          py={{ base: 10, md: 20 }}>
+          py={{ base: 5, md: 10 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}>
@@ -65,27 +65,34 @@ export default function Myreceipies() {
         {getallreceips.map((value, key) => {
             return (
               <Box
-                bg="#dcf1fa"
-                maxW="sm"
-                borderWidth="1px"
                 rounded="lg"
-                shadow="lg"
-                position="relative">
-                {value.recipeId.status && (
+                position="relative"
+                role={'group'}
+                w={'full'}
+                h="300px"
+                bgGradient="linear(to-b, white.0, #ceeaed)" 
+                borderRadius={'20px'}
+                pos={'relative'}
+                zIndex={1}>
+                {value.recipeId.status==='approved' && (
                   <Circle
-                    size="25px"
+                    size="50px"
                     position="absolute"
                     top={2}
                     right={2}
-                    bg="red.200"
+                    bg="#E2E8F0"
                   />
                 )}
-                <Image
-                  src={imagepath+"/"+value.recipeId.image}
-                  alt={`Picture`}
-                  roundedTop="lg"
-                />
-                <Stack p={2}>
+                <Box 
+                 position="absolute"
+                 top={25}
+                 right={25}
+                 color="Tomato"
+                >
+                <i className="fa-solid fa-heart"></i>
+                </Box>
+                    <Image h="200px" borderRadius={'15px'} objectFit={'cover'} w='full' src={imagepath + "/" + value.recipeId.image} layout={'fill'} />
+                <Stack p={2} pt={4}>
                     <Heading
                       color={useColorModeValue('gray.700', 'white')}
                       fontSize={'1xl'}

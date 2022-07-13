@@ -5,22 +5,17 @@ import {
   Heading,
   Stack,
   Box,
-  Text,
   HStack,
   Textarea,
-  Spacer,
   FormControl,
-  Select,
   FormLabel,
   FormErrorMessage,
-  VStack,
+  Select,
+  Button,
   Image,
-  Checkbox,
+  Input,
+  Text,
   Flex,
-  Avatar,
-  useColorModeValue,
-  Center,
-  InputRightElement,Button, InputGroup,Input, MenuItemOption
 } from '@chakra-ui/react';
 import { Inboxemail } from './Homepagecmp/Banner2';
 import Contactdelious from './Contactcmp/Deliousrecip';
@@ -56,38 +51,89 @@ export default function Contactpage() {
                         enquery_type:'',
                         messages:'',
                       }}
-                      onSubmit={(values) => {
-                        alert(JSON.stringify(values, null, 2));
+
+                      validate={(values) => {
+
+                        const errors = {};
+
+                        if (values.name.trim() === "") {
+                          errors.name = "** Name Feild is Required";
+                        } else if (isNaN(values.name) === false) {
+                          errors.name = "** Name Contain only characters";
+                        }
+
+                        if (!values.email) {
+                          errors.email = "** Email Feild Required";
+                        } else if (
+                          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                        ) {
+                          errors.email = "** Invalid email address";
+                        }
+
+                        if (values.subject.trim() === "") {
+                          errors.subject = "** subject Feild is Required";
+                        } else if (isNaN(values.subject) === false) {
+                          errors.subject = "**subject Contain only characters";
+                        }
+
+                        if (values.enquery_type === "") {
+                          errors.enquery_type = "** Please select Enquery type feild";
+                        }
+
+                        return errors;
                       }}
+
+                       onSubmit={(values, { setSubmitting }) => {
+                       setTimeout(() => {
+                          alert(JSON.stringify(values, null, 2));
+                          setSubmitting(false);
+                        }, 400);
+                       }}
+
+                      // onSubmit={(values) => {
+                      //   alert(JSON.stringify(values, null, 2));
+                      // }}
                     >
-                      {({ handleSubmit, errors, touched }) => (
+                      {({ 
+                        values,
+                        errors, 
+                        touched,  
+                        handleChange,
+                        handleBlur,
+                        handleSubmit,
+                        isSubmitting 
+                      }) => (
                         <form onSubmit={handleSubmit}>
                           <HStack  align="flex-start">
                             <FormControl>
                               <FormLabel htmlFor="Name">Name</FormLabel>
                                <Input 
-                                id="name"
-                                name="name"
                                 type="text" 
+                                name="name"
+                                id="name"
                                 placeholder='Enter your name ' 
                                 size='lg'
                                 variant="filled"
-                                _hover={{
-                                  borderRadius: 'gray.300',
-                                }}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.name}
                                 />
+                                 <Text color={'red'} fontSize={'sm'}>{errors.name && touched.name && errors.name}</Text> 
                             </FormControl>
                             <FormControl>
                               <FormLabel htmlFor="email">Email Address</FormLabel>
                               <Input
-                                id="email"
-                                name="email"
                                 type="email" 
+                                name="email"
+                                id="email"
                                 placeholder='Enter your email'
                                 size='lg'
                                 variant="filled"
+                                value={values.email}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
                               />
-                              <FormErrorMessage>{errors.password}</FormErrorMessage>
+                                <Text color={'red'} fontSize={'sm'}>{errors.email && touched.email && errors.email}</Text>
                             </FormControl>
                           </HStack>
                           <HStack spacing={4} align="flex-start"  mt={10}>
@@ -101,22 +147,35 @@ export default function Contactpage() {
                                   variant="filled"
                                   size='lg'
                                   placeholder='Enter your subject'
+                                  value={values.subject}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
                                 />
+                                 <Text color={'red'} fontSize={'sm'}>{errors.subject && touched.subject && errors.subject}</Text>
                               </FormControl>
                               <FormControl>
                                 <FormLabel htmlFor="enquery">Enquery Type</FormLabel>
                                   <Stack spacing={3}>
-                                    <Select  placeholder='enquery type' size='lg'>
+                                    <Select 
+                                     size='lg' 
+                                     name="enquery_type"
+                                     value={values.enquery_type}
+                                     onChange={handleChange}
+                                     onBlur={handleBlur}>
+                                    <option value="">Select a job type</option>
                                     <option value='option1'>Option 1</option>
                                     <option value='option2'>Option 2</option>
                                     <option value='option3'>Option 3</option>
                                     </Select>
                                   </Stack>
+                                  <Text color={'red'} fontSize={'sm'}>
+                                     {errors.enquery_type && touched.enquery_type && errors.enquery_type}
+                                  </Text>
                               </FormControl>
                           </HStack>
                           <HStack spacing={10} mt={10}>
                             <FormControl>
-                              <FormLabel htmlFor="message">Message</FormLabel>
+                              <FormLabel htmlFor="message">Message(optional)</FormLabel>
                               <Textarea  
                               borderColor="gray.300"
                               _hover={{
@@ -127,8 +186,8 @@ export default function Contactpage() {
                             </FormControl>
                           </HStack>
                           <HStack pt={12}>
-                            <Button type="submit" colorScheme="purple" width="full">
-                            Submit
+                            <Button type="submit" colorScheme="purple" width="full" disabled={isSubmitting}>
+                                Submit
                             </Button>
                           </HStack>
                         </form>
