@@ -2,18 +2,14 @@ import {React, useState, useEffect } from 'react';
 import { Container } from '@chakra-ui/react';
 import { SimpleGrid, Box } from '@chakra-ui/react';
 import {
-  Flex,
   Circle,
   Image,
-  Badge,
   useColorModeValue,
   Heading,
   Stack,
-  Icon,
   Text,
-  chakra,
-  Tooltip,
 } from '@chakra-ui/react';
+import { imagepath } from '../../Path/imgpath';
 
 const data = {
   imageURL:
@@ -21,8 +17,7 @@ const data = {
 };
 
 export default function Myreceipies() {
-  
-  const [receips, setreceips] = useState([]);
+  const [getallreceips, setgetallreceips] = useState([]);
 
   useEffect(() => {
     Getallrecipy();
@@ -32,21 +27,21 @@ export default function Myreceipies() {
     const axios = require('axios');
     const config = {
       method: 'get',
-      url: 'http://95.111.202.157:8001/api/v1/getAllRecipes',
+      url: 'https://foodielandnod.herokuapp.com/api/v1/getAllRecipes',
       headers: { }
     };
 
     axios(config)
     .then(function (response) {
       //console.log(JSON.stringify(response.data));
-      setreceips(response.data);
+      setgetallreceips(response.data);
     })
     .catch(function (error) {
       console.log(error);
     });
 
-    console.log(receips);
-    console.log(typeof(receips));
+    //console.log(getallreceips);
+    //console.log(typeof(getallreceips));
   }
 
   return (
@@ -67,7 +62,7 @@ export default function Myreceipies() {
           </Text>
         </Stack>
         <SimpleGrid columns={[2, null, 3]} spacing="35px">
-        {receips.map((value, key) => {
+        {getallreceips.map((value, key) => {
             return (
               <Box
                 bg="#dcf1fa"
@@ -86,7 +81,7 @@ export default function Myreceipies() {
                   />
                 )}
                 <Image
-                  src={data.imageURL}
+                  src={imagepath+"/"+value.recipeId.image}
                   alt={`Picture`}
                   roundedTop="lg"
                 />
@@ -99,8 +94,8 @@ export default function Myreceipies() {
                     </Heading>
                   </Stack>
                   <Stack p={2}  direction={'row'} spacing={6} align={'center'}>
-                    <Text fontWeight={600}><i className="fa-solid fa-stopwatch"></i> 30 Minuts </Text>
-                    <Text fontWeight={600}><i className="fa-solid fa-utensils"></i>  Snacks</Text>
+                    <Text fontWeight={600}><i className="fa-solid fa-stopwatch"></i> {value.recipeId.prepTime} </Text>
+                    <Text fontWeight={600}><i className="fa-solid fa-utensils"></i>  {value.recipeId.categoryId.categoryName}</Text>
                 </Stack>
               </Box>
             );

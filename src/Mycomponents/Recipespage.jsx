@@ -94,7 +94,7 @@ export default function Recipespage() {
                    pr={5}
                    ml={5}
                    borderColor={useColorModeValue('gray.200', 'gray.900')}>
-                 <i class="fa-solid fa-clock"></i>
+                 <i className="fa-solid fa-clock"></i>
                 <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                   <Text fontWeight={600}>PREP TIME</Text>
                   <Text color={'gray.500'}>15 Manuts</Text>
@@ -106,7 +106,7 @@ export default function Recipespage() {
                    pr={5}
                    ml={5}
                    borderColor={useColorModeValue('gray.200', 'gray.900')}>
-                  <i class="fa-solid fa-clock"></i>
+                  <i className="fa-solid fa-clock"></i>
                 <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                   <Text fontWeight={600}>COOK TIME</Text>
                   <Text color={'gray.500'}>15 Manuts</Text>
@@ -118,7 +118,7 @@ export default function Recipespage() {
                    pr={5}
                    ml={5}
                    borderColor={useColorModeValue('gray.200', 'gray.900')}>
-                <i class="fa-solid fa-utensils"></i>
+                <i className="fa-solid fa-utensils"></i>
                 <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                   <Text fontWeight={600}>CHICKEN</Text>
                 </Stack>

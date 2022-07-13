@@ -5,14 +5,12 @@ import {
   Heading,
   Text,
   Stack,
-  Container,
   Image,
-  Flex,
   useColorModeValue,
   SimpleGrid,
 } from '@chakra-ui/react';
 
-import { imagepath } from '../../Path/imgpath';
+import { imagepath } from '../Path/imgpath';
 
 export default function Deleciesrecipy() {
   const [deleciesrecipy, setdeleciesrecipy] = useState([]);
@@ -43,29 +41,6 @@ export default function Deleciesrecipy() {
   }
 
   return (
-    <Container maxW="6xl" mt={20} mb={6}>
-      {/*<Flex>
-        <Box>
-          <Text fontSize="3xl" fontWeight="900">
-            Try this delicious recipes
-            <br/>
-            to make your day
-          </Text>
-        </Box>
-        <Spacer />
-        <Box>
-          <Text>Here is some paragraph.</Text>
-        </Box>
-      </Flex>
-      */}
-        <Flex>
-          <Heading w={540}>Try this delicious receipe<br/> to make your day</Heading>
-          <Text w={540}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            tempor incididunt ut labore et dolore magna aliqua.
-          </Text>
-        </Flex>
       <SimpleGrid mt={20} columns={[2, null, 4]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
@@ -125,6 +100,5 @@ export default function Deleciesrecipy() {
           );
         })}
       </SimpleGrid>
-    </Container>
   );
 }

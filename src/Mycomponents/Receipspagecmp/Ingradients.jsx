@@ -52,7 +52,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     </Text>
                     <Text  as='del'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>
@@ -67,7 +67,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-regular fa-circle"></i>
+                    <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text  as='span'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>
@@ -82,7 +82,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-regular fa-circle"></i>
+                    <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text   as='span'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>
@@ -97,7 +97,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-regular fa-circle"></i>
+                    <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text   as='span'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>
@@ -112,7 +112,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-regular fa-circle"></i>
+                    <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text   as='span'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>
@@ -138,7 +138,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-regular fa-circle"></i>
+                    <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text   as='span'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>
@@ -153,7 +153,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-regular fa-circle"></i>
+                    <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text   as='span'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>
@@ -168,7 +168,7 @@ export default function Ingradients() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.600'}>
-                    <i class="fa-regular fa-circle"></i>
+                    <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text   as='span'  pl={8}> Leorem ispum dollor sit amet</Text>
                 </Text>

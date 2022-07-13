@@ -3,17 +3,14 @@ import {
   Container,
   Heading,
   Stack,
-  Box,
   Text,
-  Spacer,
-  Flex,
-  Avatar,
   useColorModeValue,
-  Center,
+  Box,
   InputRightElement,Button, InputGroup,Input
 } from '@chakra-ui/react';
 import { Inboxemail } from './Homepagecmp/Banner2';
 import Blogrecipelistcmp from './Blogpagecmp/Blogreciplist';
+import Deleciesrecipy from '../Cardcmp/Popularrecipecard';
 
 export default function Blogpage() {
     return (
@@ -64,6 +61,16 @@ export default function Blogpage() {
           <Blogrecipelistcmp/>
           {/* contact banner component  */}
           <Inboxemail/>
+          {/*checkout our delious recipe cmp*/}
+          <Container mt={6} mb={6} maxW="6xl">
+            <Box>
+                <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+                <Heading fontSize={'4xl'}>Check out the deliceous recipe</Heading>
+                </Stack>
+                {/*render delious card cmp*/}
+                <Deleciesrecipy/>
+            </Box>
+          </Container>
         </>
   ) ;
 }

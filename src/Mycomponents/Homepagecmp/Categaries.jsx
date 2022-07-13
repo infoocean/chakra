@@ -13,8 +13,7 @@ import {
   Spacer,
   Box,
 } from '@chakra-ui/react';
-
-const imgpath = "http://95.111.202.157:8001";
+import { imagepath } from '../../Path/imgpath';
 
 export default function Categeries() {
 
@@ -28,7 +27,7 @@ export default function Categeries() {
     const axios = require('axios');
     const config = {
       method: 'get',
-      url: 'http://95.111.202.157:8001/api/getAllCategory',
+      url: 'https://foodielandnod.herokuapp.com/api/getAllCategory',
       headers: {},
     };
     axios(config)
@@ -93,7 +92,7 @@ export default function Categeries() {
                     },
                   }}
                 >
-                  <Image rounded={'lg'} objectFit={'cover'} src={imgpath+"/"+value.image} />
+                  <Image rounded={'lg'} objectFit={'cover'} src={imagepath+"/"+value.image} />
                 </Box>
                 <Stack align={'center'}>
                   <Heading

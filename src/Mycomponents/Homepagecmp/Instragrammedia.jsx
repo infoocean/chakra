@@ -275,7 +275,7 @@ export default function Instragramsection() {
                       alt={'Author'}
                     />
                     <Stack direction={'column'} fontSize={'sm'}>
-                      <Text fontWeight={700}> Foodieland <i class="fa-solid fa-circle-check"></i></Text>
+                      <Text fontWeight={700}> Foodieland <i className="fa-solid fa-circle-check"></i></Text>
                       <Text className='location'>Tokyo, Japan</Text>
                     </Stack>
                   </Stack>

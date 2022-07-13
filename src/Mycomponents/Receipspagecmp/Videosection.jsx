@@ -167,6 +167,24 @@ import {
             </Box>
           </Flex>
         </Stack>
+        <Stack>
+          <Text
+               p={4}
+              color={useColorModeValue('gray.700', 'white')}
+              fontSize={'1xl'}
+              fontFamily={'body'}>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore et dolore magna.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore et dolore magna.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore et dolore magna.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore et dolore magna.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore et dolore magna.
+              </Text>
+        </Stack>
       </Container>
     );
   }

@@ -6,21 +6,17 @@ import {
   Flex,
   Image,
   Text,
-  Grid,
-  Spacer,
   Heading,
   HStack,
   Avatar,
   Button,
-  SimpleGrid,
-  GridItem,
   useColorModeValue
 } from '@chakra-ui/react';
-const imgpath = "http://95.111.202.157:8001";
-
+import { imagepath } from '../../Path/imgpath';
 import posterimg from '../../Assets/Images/poster1.jpeg';
 
 export default function Blogrecipelistcmp() {
+  
   return (
     
     <Container  mt={6} mb={6} maxW="6xl">
@@ -103,7 +99,7 @@ export default function Blogrecipelistcmp() {
                                     pr={5}
                                     ml={5}
                                     borderColor={useColorModeValue('gray.200', 'gray.900')}>
-                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <i className="fa-solid fa-calendar-days"></i>
                                     <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                                     <Text fontWeight={600}> 15 March 2022</Text>
                                     </Stack>

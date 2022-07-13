@@ -1,19 +1,15 @@
 import React from 'react';
 import {
-    Container,
-    Heading,
-    Stack,
-    Box,
-    Text,
-    Image,
-    Spacer,
-    Flex,
-    Avatar,
-    useColorModeValue,
-    Center,
-    InputRightElement,Button, InputGroup,Input
-  } from '@chakra-ui/react';
-
+Container,
+Heading,
+Stack,
+Box,
+Text,
+Image,
+Flex,
+Avatar,
+useColorModeValue,
+} from '@chakra-ui/react';
 import { Inboxemail } from './Homepagecmp/Banner2';
 import posterimg from '../Assets/Images/poster1.jpeg';
 import Contactdelious from './Contactcmp/Deliousrecip';
@@ -53,7 +49,7 @@ export default function Blogpostpage() {
                     pr={5}
                     ml={5}
                     borderColor={useColorModeValue('gray.200', 'gray.900')}>
-                    <i class="fa-solid fa-calendar-days"></i>
+                    <i className="fa-solid fa-calendar-days"></i>
                     <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                     <Text fontWeight={600}> 15 March 2022</Text>
                     </Stack>

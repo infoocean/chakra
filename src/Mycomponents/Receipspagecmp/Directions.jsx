@@ -32,7 +32,7 @@ export default function Directions() {
                     fontSize={'2xl'}
                     fontFamily={'body'}>
                     <Text  as="span"  color={'gray.500'}>
-                        <i class="fa-regular fa-circle"></i>
+                        <i className="fa-regular fa-circle"></i>
                     </Text>
                     <Text  as="span" pl={8}>1. Leorem ispum dollor sit amet</Text>
                 </Heading>
@@ -130,7 +130,7 @@ export default function Directions() {
                         fontSize={'2xl'}
                         fontFamily={'body'}>
                         <Text  as="span"  color={'gray.500'}>
-                            <i class="fa-regular fa-circle"></i>
+                            <i className="fa-regular fa-circle"></i>
                         </Text>
                         <Text  as="span" pl={8}>2. Leorem ispum dollor sit amet</Text>
                     </Heading>
@@ -163,7 +163,7 @@ export default function Directions() {
                         fontSize={'2xl'}
                         fontFamily={'body'}>
                         <Text  as="span"  color={'gray.500'}>
-                            <i class="fa-regular fa-circle"></i>
+                            <i className="fa-regular fa-circle"></i>
                         </Text>
                         <Text  as="span" pl={8}>3. Leorem ispum dollor sit amet</Text>
                     </Heading>
