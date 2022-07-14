@@ -126,20 +126,10 @@ import {
             align={'center'}
             position={'relative'}
             w={'full'}>
-            <Blob
-              w={'150%'}
-              h={'150%'}
-              position={'absolute'}
-              top={'-20%'}
-              left={0}
-              zIndex={-1}
-              color={useColorModeValue('red.50', 'red.400')}
-            />
             <Box
               position={'relative'}
               height={'480px'}
               rounded={'2xl'}
-              boxShadow={'2xl'}
               width={'full'}
               overflow={'hidden'}>
               <IconButton
