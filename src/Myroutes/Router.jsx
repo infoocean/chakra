@@ -5,6 +5,7 @@ import Blogpage from '../Mycomponents/Blogpage';
 import Blogpostpage from '../Mycomponents/Blogpostpage';
 import Contactpage from '../Mycomponents/Contactpage';
 import Homepage from '../Mycomponents/Homepage';
+import Recipesdetailspage from '../Mycomponents/Receipspagecmp/Recipesdetails';
 import Recipespage from '../Mycomponents/Recipespage';
 
 export default function Myroutes(){
@@ -17,6 +18,9 @@ export default function Myroutes(){
         <Route path="/contact" element={< Contactpage/>}/>
         <Route path="/aboutus" element={< Aboutpage/>}/>
         <Route path="/blogpost" element={< Blogpostpage/>}/>
+        <Route path="/getrecipesdetails/:id" element={< Recipesdetailspage/>} />
+ 
+
     </Routes>
   );
 }

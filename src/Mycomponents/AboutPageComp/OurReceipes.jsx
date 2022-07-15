@@ -1,6 +1,7 @@
 import {React, useState, useEffect } from 'react';
 import { Container } from '@chakra-ui/react';
 import { SimpleGrid, Box } from '@chakra-ui/react';
+import posterimg from '../../Assets/Images/poster1.jpeg';
 import {
   Circle,
   Image,
@@ -11,7 +12,12 @@ import {
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
 
-export default function Myreceipies() {
+const data = {
+  imageURL:
+    'https://www.eatthis.com/wp-content/uploads/sites/4/2021/01/chicken-and-broccoli.jpg?quality=82&strip=1',
+};
+
+export default function Ourrecipes() {
   const [getallreceips, setgetallreceips] = useState([]);
 
   useEffect(() => {
@@ -48,7 +54,7 @@ export default function Myreceipies() {
           <Heading
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}>
-            Simple and tasty recipes{' '}
+            Our Simple and tasty recipes{' '}
           </Heading>
           <Text color={'gray.500'} maxW={'3xl'}>
             Never miss a meeting. Never be late for one too. Keep track of your
@@ -57,9 +63,10 @@ export default function Myreceipies() {
           </Text>
         </Stack>
         <SimpleGrid columns={[2, null, 3]} spacing="35px">
-        {getallreceips.map((value, key) => {
+        {getallreceips.slice(0,9).map((value, key) => {
+          if (key != 5) {
             return (
-              <Box
+              <Box id={key}
                 rounded="lg"
                 position="relative"
                 role={'group'}
@@ -69,20 +76,19 @@ export default function Myreceipies() {
                 borderRadius={'20px'}
                 pos={'relative'}
                 zIndex={1}>
-                {value.recipeId.status==='approved' && (
                   <Circle
                     size="50px"
                     position="absolute"
-                    top={2}
-                    right={2}
-                    bg="#E2E8F0"
+                    top={3}
+                    right={2.5}
+                    bg="#ffffff"
                   />
-                )}
                 <Box 
                  position="absolute"
                  top={25}
                  right={25}
-                 color="Tomato"
+                 color="#cc0000"
+                 fontSize='20px'
                 >
                 <i className="fa-solid fa-heart"></i>
                 </Box>
@@ -101,6 +107,23 @@ export default function Myreceipies() {
                 </Stack>
               </Box>
             );
+          }else{
+            return (
+              <Box
+                rounded="lg"
+                position="relative"
+                role={'group'}
+                w={'full'}
+                h="300px"
+                bgGradient="linear(to-b, white.0, #ceeaed)" 
+                borderRadius={'20px'}
+                pos={'relative'}
+                zIndex={1}>
+                <Image h="300px" borderRadius={'15px'} objectFit={'cover'} w='full' 
+                src={posterimg} layout={'fill'} />
+              </Box>
+            );
+          }
           })}
         </SimpleGrid>
     </Container>
