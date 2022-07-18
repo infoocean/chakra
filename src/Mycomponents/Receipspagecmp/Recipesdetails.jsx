@@ -10,7 +10,6 @@ import {
   Flex,
   Avatar,
   useColorModeValue,
-  Center
 } from '@chakra-ui/react';
 import Videosection from './Videosection';
 import Ingradients from './Ingradients';
@@ -49,8 +48,8 @@ export default function Recipesdetailspage() {
         });
         
         console.log(getreceipsdet);
-        console.log(getreceipsdet.data.recipeId.title);
-        console.log(typeof(getreceipsdet));
+        //console.log(getreceipsdet.data.recipeId.title);
+        //console.log(typeof(getreceipsdet));
     }
 
   return (
@@ -66,7 +65,7 @@ export default function Recipesdetailspage() {
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
               lineHeight={'110%'}>
-              {getreceipsdet.data.recipeId.title}
+              {/*getreceipsdet.data.recipeId.title*/}
             </Heading>
           </Stack>
           <Stack>
@@ -119,8 +118,8 @@ export default function Recipesdetailspage() {
                   src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
                   alt={'Author'}
                 />
-                <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                  <Text fontWeight={600}>John Smith</Text>
+                <Stack direction={'column'} spacing={0} fontSize={'sm'}> userId
+                  <Text fontWeight={600}></Text>
                   <Text color={'gray.500'}>15 March 2022</Text>
                 </Stack>
               </Stack>  

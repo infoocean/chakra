@@ -83,9 +83,21 @@ export default function Contactpage() {
                         return errors;
                       }}
 
-                       onSubmit={(values, { setSubmitting }) => {
+                       onSubmit={(values, { setSubmitting }, event) => {
                        setTimeout(() => {
-                          alert(JSON.stringify(values, null, 2));
+                          //alert(JSON.stringify(values, null, 2));
+
+                          const formdata =  JSON.stringify(values, null, 2);
+                          alert(formdata);
+
+                          fetch('https://foodielandnod.herokuapp.com/api/addContactDetails', {
+                          method: 'POST',
+                          body: formdata
+                          }).then(function(response) {
+                          console.log(response)
+                          return response.json();
+                          });
+                          //event.preventDefault();
                           setSubmitting(false);
                         }, 400);
                        }}

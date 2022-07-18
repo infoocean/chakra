@@ -11,7 +11,6 @@ import {
   useColorModeValue,
   SimpleGrid,
 } from '@chakra-ui/react';
-
 import { imagepath } from '../../Path/imgpath';
 
 export default function Deleciesrecipy() {
@@ -69,7 +68,7 @@ export default function Deleciesrecipy() {
       <SimpleGrid mt={20} columns={[2, null, 4]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
-              <Box 
+              <Box key={key}
                 rounded="lg"
                 position="relative"
                 role={'group'}
