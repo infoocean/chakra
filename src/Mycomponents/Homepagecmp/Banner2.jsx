@@ -18,9 +18,26 @@ export function Inboxemail() {
         return false;
      }
 
-     const cnvtjson = JSON.stringify(email);
+     const cnvtjson = JSON.parse(email);
      alert(cnvtjson);
-  }
+
+      fetch("https://foodielandnod.herokuapp.com/api/subscribe",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: 
+          cnvtjson,
+          }).then(function(response) {
+          console.log(response);
+          if(response.status===200) {
+            //console.log("success");
+            alert("Thanks for Subcribe");
+          }
+        });
+      }
 
   return (
     <Container maxW="6xl" mt={20} mb={20}>
