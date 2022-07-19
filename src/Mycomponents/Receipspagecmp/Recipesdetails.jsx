@@ -17,6 +17,8 @@ import Directions from './Directions';
 import { Inboxemail } from '../Homepagecmp/Banner2';
 import Blogpagerecips from './Recipes';
 
+import { imagepath } from '../../Path/imgpath';
+
 
 
 export default function Recipesdetailspage() {
@@ -65,7 +67,7 @@ export default function Recipesdetailspage() {
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
               lineHeight={'110%'}>
-              {/*getreceipsdet.data.recipeId.title*/}
+              {getreceipsdet && getreceipsdet.data && getreceipsdet.data.recipeId && getreceipsdet.data.recipeId.title}
             </Heading>
           </Stack>
           <Stack>
@@ -115,10 +117,10 @@ export default function Recipesdetailspage() {
                    pr={5}
                    borderColor={useColorModeValue('gray.200', 'gray.900')}>
                 <Avatar
-                  src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+                  src={imagepath+"/"+(getreceipsdet && getreceipsdet.data && getreceipsdet.data.recipeId && getreceipsdet.data.recipeId.userId && getreceipsdet.data.recipeId.userId.Image)}
                   alt={'Author'}
                 />
-                <Stack direction={'column'} spacing={0} fontSize={'sm'}> userId
+                <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                   <Text fontWeight={600}></Text>
                   <Text color={'gray.500'}>15 March 2022</Text>
                 </Stack>
@@ -132,7 +134,7 @@ export default function Recipesdetailspage() {
                  <i className="fa-solid fa-clock"></i>
                 <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                   <Text fontWeight={600}>PREP TIME</Text>
-                  <Text color={'gray.500'}>15 Manuts</Text>
+                  <Text color={'gray.500'}>{getreceipsdet && getreceipsdet.data && getreceipsdet.data.recipeId && getreceipsdet.data.recipeId.userId && getreceipsdet.data.recipeId.prepTime}</Text>
                 </Stack>
               </Stack>   
               <Stack direction={'row'} spacing={4} align={'center'} 
@@ -144,7 +146,7 @@ export default function Recipesdetailspage() {
                   <i className="fa-solid fa-clock"></i>
                 <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                   <Text fontWeight={600}>COOK TIME</Text>
-                  <Text color={'gray.500'}>15 Manuts</Text>
+                  <Text color={'gray.500'}>{getreceipsdet && getreceipsdet.data && getreceipsdet.data.recipeId && getreceipsdet.data.recipeId.userId && getreceipsdet.data.recipeId.cookTime}</Text>
                 </Stack>
               </Stack> 
               <Stack direction={'row'} spacing={4} align={'center'} 
@@ -155,7 +157,7 @@ export default function Recipesdetailspage() {
                    borderColor={useColorModeValue('gray.200', 'gray.900')}>
                 <i className="fa-solid fa-utensils"></i>
                 <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                  <Text fontWeight={600}>CHICKEN</Text>
+                  <Text fontWeight={600}>{getreceipsdet && getreceipsdet.data && getreceipsdet.data.recipeId && getreceipsdet.data.recipeId.categoryId && getreceipsdet.data.recipeId.categoryId.categoryName}</Text>
                 </Stack>
               </Stack>         
             </Flex>
@@ -163,7 +165,7 @@ export default function Recipesdetailspage() {
         </Box>
      </Container>
      {/* videosection component */}
-     <Videosection/>
+     <Videosection id = {id}/>
      {/* Ingradients component load */}
      <Ingradients/>
     {/* directions component */}

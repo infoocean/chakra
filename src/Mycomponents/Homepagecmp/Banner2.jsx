@@ -5,21 +5,24 @@ import Subs2 from "../../Assets/Images/subs2.png";
 
 export function Inboxemail() {
 
-
   const [email, setemail] = useState('');
 
   function handleemail(e){
     let myemail = e.target.value;
     setemail(myemail);
   }
+
   function emailsubmit(e){
      if(!email){
         alert('required feilds');
         return false;
      }
+    
+     const inputemail = {email};
+     //console.log(inputemail);
 
-     const cnvtjson = JSON.parse(email);
-     alert(cnvtjson);
+     const cnvtjson = JSON.stringify(inputemail);
+     //alert(cnvtjson);
 
       fetch("https://foodielandnod.herokuapp.com/api/subscribe",
         {
@@ -35,7 +38,11 @@ export function Inboxemail() {
           if(response.status===200) {
             //console.log("success");
             alert("Thanks for Subcribe");
+            setemail('');
+          }else{
+            alert("Email Allready Exists");
           }
+          
         });
       }
 

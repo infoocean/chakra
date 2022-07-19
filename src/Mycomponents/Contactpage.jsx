@@ -44,13 +44,14 @@ export default function Contactpage() {
             <Flex bg="gray.100">
               <Box bg="white" p={6}>
                 <Formik
-                  initialValues={{
+                  const initialValues={{
                     name: "",
                     subject: "",
                     email: "",
                     enquiryType: "",
                     message: "",
                   }}
+                  
                   validate={(values) => {
                     const errors = {};
 
@@ -105,6 +106,7 @@ export default function Contactpage() {
                             alert("data submitted successfully");
                           }else{
                             alert("email allready exists");
+                            resetForm(values) ;
                           }
                       });
 

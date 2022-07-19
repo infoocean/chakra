@@ -5,6 +5,7 @@ import Popularrecipes from './AboutPageComp/PopularRecipes';
 import RearchRecipes from './AboutPageComp/SearchRecipes';
 
 import { umysePagination } from '../TestFolder/Pagination';
+import Search from '../TestFolder/Search';
 
 export default function Aboutpage() {
   return (
@@ -13,7 +14,9 @@ export default function Aboutpage() {
       <RearchRecipes/>
       <Ourrecipes/>
       <Popularrecipes/>
+      <Search/>
       <umysePagination/>
+
     </>
   );
 }
