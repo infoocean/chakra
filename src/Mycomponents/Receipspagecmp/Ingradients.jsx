@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode ,useState,useEffect} from 'react';
 import {
   Stack,
   Container,
@@ -17,7 +17,40 @@ const imgpath = "http://95.111.202.157:8001";
 
 import posterimg from '../../Assets/Images/poster1.jpeg';
 
-export default function Ingradients() {
+export default function Ingradients(props) {
+     
+    const id = props.id;
+    //console.log(id);
+    const [getreceipsdet, setgetreceipsdet] = useState([]);
+    useEffect(() => {
+        Getrecipydet();
+    },[]);
+    function Getrecipydet() {
+
+        const url= 'https://foodielandnod.herokuapp.com/api/recipeDetails?id=';
+        const axios = require('axios');
+        const config = {
+        method: 'get',
+        url: url+id,
+        headers: { }
+        };
+        axios(config)
+        .then(function (response) {
+            setgetreceipsdet(response.data);
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+        
+        //console.log(getreceipsdet);
+        //console.log(getreceipsdet.data.ingredient);
+        //console.log(getreceipsdet.data.ingredient[0].formaindish);
+        //console.log(typeof(getreceipsdet));
+    }
+
+
+    
+
   return (
     
     <Container  mt={6} mb={6} maxW="6xl">
@@ -39,24 +72,29 @@ export default function Ingradients() {
                     color={useColorModeValue('gray.700', 'white')}
                     fontSize={'2xl'}
                     fontFamily={'body'}>
-                    <Text  as="span">For Men Dish</Text>
+                    <Text  as="span">For Main Dish</Text>
                 </Heading>
             </Stack>
-            <Stack borderBottom={2}
+            
+                <Stack 
+                    //id={key}
+                    borderBottom={2}
                     borderStyle={'solid'}
                     borderColor={useColorModeValue('gray.200', 'gray.900')}
                     h="100px">
-                <Text
-                    pt={4}
-                    color={useColorModeValue('gray.700', 'white')}
-                    fontSize={'2xl'}
-                    fontFamily={'body'}>
-                    <Text  as="span"  color={'gray.600'}>
-                    <i className="fa-solid fa-circle-check"></i>
+                    <Text
+                        pt={4}
+                        color={useColorModeValue('gray.700', 'white')}
+                        fontSize={'2xl'}
+                        fontFamily={'body'}>
+                        <Text  as="span"  color={'gray.600'}>
+                        <i className="fa-solid fa-circle-check"></i>
+                        </Text>
+                        <Text  as='del'  pl={8}> Leorem ispum dollor sit amet</Text>
                     </Text>
-                    <Text  as='del'  pl={8}> Leorem ispum dollor sit amet</Text>
-                </Text>
-            </Stack>
+                </Stack>
+          
+            
             <Stack borderBottom={2}
                     borderStyle={'solid'}
                     borderColor={useColorModeValue('gray.200', 'gray.900')}
