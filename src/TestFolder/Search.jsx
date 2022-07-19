@@ -56,6 +56,8 @@ export default function Search(initialDetails) {
         <Container mt={6} mb={6} maxW="6xl">
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
                <Box>hii</Box>
+               <Box>hii</Box>
+               <Box>hii</Box>
             </SimpleGrid>
         </Container>
     );

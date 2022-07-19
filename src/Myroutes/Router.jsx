@@ -5,6 +5,8 @@ import Blogpage from '../Mycomponents/Blogpage';
 import Blogpostpage from '../Mycomponents/Blogpostpage';
 import Contactpage from '../Mycomponents/Contactpage';
 import Homepage from '../Mycomponents/Homepage';
+import AllCategeries from '../Mycomponents/Homepagecmp/ShowAllCategories';
+import CategoriesByRecipes from '../Mycomponents/Homepagecmp/ShowCategoriesByRecipes';
 import Recipesdetailspage from '../Mycomponents/Receipspagecmp/Recipesdetails';
 import Recipespage from '../Mycomponents/Recipespage';
 
@@ -13,6 +15,8 @@ export default function Myroutes(){
     <Routes>
         <Route path="/" element={<Homepage />}/>
         <Route path="/home" element={<Homepage />}/>
+        <Route path="/ShowAllCategories" element={<AllCategeries />}/>
+        <Route path="/ShowCategoriesByRecipes/:id" element={<CategoriesByRecipes />}/>
         <Route path="/recipes" element={< Recipespage/>}/>
         <Route path="/blogs" element={< Blogpage/>}/>
         <Route path="/contact" element={< Contactpage/>}/>

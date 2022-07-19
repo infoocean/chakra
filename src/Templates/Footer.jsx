@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Box,
     chakra,
     Container,
-    Link,
     Image,
     Stack,
     Button,
@@ -68,17 +68,17 @@ import {
               align={{ base: 'center', md: 'center' }}>
               <Text px={1}> Lorem Ipsum is not simply random text.</Text>
               <Stack direction={'row'} spacing={4}>
-                  <Link >
+                  <Link to="/recipes" >
                     <Button variant="nav"> Recipes </Button>
                   </Link>
-                  <Link >
+                  <Link  to="/blogs">
                     <Button variant="nav"> Blogs </Button>
                   </Link>
-                  <Link >
+                  <Link to="/contact">
                     <Button variant="nav"> Contact </Button>
                   </Link>
-                  <Link >
-                    <Button variant="nav"> About us </Button>
+                  <Link to="/aboutus" >
+                    <Button  variant="nav"> About us </Button>
                   </Link>
               </Stack>
             </Container>

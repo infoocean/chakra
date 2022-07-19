@@ -12,6 +12,7 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
+import { Link } from 'react-router-dom';
 
 export default function Deleciesrecipy() {
   const [deleciesrecipy, setdeleciesrecipy] = useState([]);
@@ -68,6 +69,7 @@ export default function Deleciesrecipy() {
       <SimpleGrid mt={20} columns={[2, null, 4]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
+            <Link to={`/getrecipesdetails/${value._id}`}>
               <Box key={key}
                 rounded="lg"
                 position="relative"
@@ -121,6 +123,7 @@ export default function Deleciesrecipy() {
                   <Text fontWeight={600}><i className="fa-solid fa-utensils"></i> {value.recipeId.categoryId.categoryName}</Text>
                 </Stack>
               </Box>
+            </Link>
           );
         })}
       </SimpleGrid>

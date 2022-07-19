@@ -19,8 +19,6 @@ import Blogpagerecips from './Recipes';
 
 import { imagepath } from '../../Path/imgpath';
 
-
-
 export default function Recipesdetailspage() {
 
     const { id } = useParams();
@@ -167,7 +165,7 @@ export default function Recipesdetailspage() {
      {/* videosection component */}
      <Videosection id = {id}/>
      {/* Ingradients component load */}
-     <Ingradients/>
+     <Ingradients id={id}/>
     {/* directions component */}
     <Directions/>
     {/* contact banner component  */}

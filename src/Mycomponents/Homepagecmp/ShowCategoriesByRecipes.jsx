@@ -2,6 +2,7 @@ import {React, useState, useEffect } from 'react';
 import { Container } from '@chakra-ui/react';
 import { SimpleGrid, Box } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import {
   Circle,
   Image,
@@ -12,33 +13,38 @@ import {
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
 
-export default function Myreceipies() {
-  const [getallreceips, setgetallreceips] = useState([]);
+export default function CategoriesByRecipes() {
 
-  useEffect(() => {
-    Getallrecipy();
-  },[]);
+    const { id } = useParams();
+    //console.log(id);
 
-  function Getallrecipy() {
-    const axios = require('axios');
-    const config = {
-      method: 'get',
-      url: 'https://foodielandnod.herokuapp.com/api/v1/getAllRecipes',
-      headers: { }
-    };
 
-    axios(config)
-    .then(function (response) {
-      //console.log(JSON.stringify(response.data));
-      setgetallreceips(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    const [getallreceips, setgetallreceips] = useState([]);
 
-    //console.log(getallreceips);
-    //console.log(typeof(getallreceips));
-  }
+    useEffect(() => {
+        Getallrecipy();
+    },[]);
+
+    function Getallrecipy() {
+        const axios = require('axios');
+        const config = {
+        method: 'get',
+        url: 'https://foodielandnod.herokuapp.com/api/v1/getAllRecipes',
+        headers: { }
+        };
+
+        axios(config)
+        .then(function (response) {
+        //console.log(JSON.stringify(response.data));
+        setgetallreceips(response.data);
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+
+        console.log(getallreceips);
+        //console.log(typeof(getallreceips));
+    }
 
   return (
     <Container maxW="6xl"> 

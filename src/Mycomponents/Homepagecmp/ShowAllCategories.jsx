@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
 
-export default function Categeries() {
+export default function AllCategeries() {
 
   const[mycatdata , setmycatdata] = useState([]);
 
@@ -49,17 +49,8 @@ export default function Categeries() {
       <Flex>
         <Box>
           <Text fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }} fontWeight="800">
-            Categories 
+            My Food Categories 
           </Text>
-        </Box>
-        <Spacer />
-        <Box>
-          <Link to="/ShowAllCategories">
-            <Button bg="#cceefc" size="lg">
-              {' '}
-              View All Categories 
-            </Button>
-          </Link>
         </Box>
       </Flex>
       <SimpleGrid mt={6} columns={[3, null, 6]} spacing="20px">

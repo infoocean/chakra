@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
     Container,
     Stack,
@@ -14,8 +15,40 @@ import {
     IconProps,
     useColorModeValue,
   } from '@chakra-ui/react';
+
+  import { imagepath } from '../../Path/imgpath';
   
-  export default function Videosection() {
+  export default function Videosection(props) {
+    const id = props.id;
+    //console.log(id);
+
+    const [getreceipsdet, setgetreceipsdet] = useState([]);
+
+    useEffect(() => {
+        Getrecipydet();
+    },[]);
+
+    function Getrecipydet() {
+
+        const url= 'https://foodielandnod.herokuapp.com/api/recipeDetails?id=';
+        const axios = require('axios');
+        const config = {
+        method: 'get',
+        url: url+id,
+        headers: { }
+        };
+        axios(config)
+        .then(function (response) {
+            setgetreceipsdet(response.data);
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+        
+        console.log(getreceipsdet);
+        //console.log(getreceipsdet.data);
+        //console.log(typeof(getreceipsdet));
+    }
     return (
       <Container maxW={'6xl'}>
         <Stack
@@ -47,11 +80,11 @@ import {
                   borderStyle={'solid'}
                   borderColor={useColorModeValue('gray.400', 'gray.900')}>
                 <Box>
-                   Calories
+                  Calories
                 </Box>
                 <Spacer />
                 <Box>
-                   219.9 kcal
+                {getreceipsdet && getreceipsdet.data && getreceipsdet.data.nutritionInformation && getreceipsdet.data.nutritionInformation.calories}
                 </Box>
               </Flex>
               <Flex 
@@ -64,7 +97,7 @@ import {
                 </Box>
                 <Spacer />
                 <Box>
-                   219.9 kcal
+                {getreceipsdet && getreceipsdet.data && getreceipsdet.data.nutritionInformation && getreceipsdet.data.nutritionInformation.totalFat}
                 </Box>
               </Flex>
               <Flex 
@@ -77,7 +110,7 @@ import {
                 </Box>
                 <Spacer />
                 <Box>
-                   219.9 kcal
+                {getreceipsdet && getreceipsdet.data && getreceipsdet.data.nutritionInformation && getreceipsdet.data.nutritionInformation.protein}
                 </Box>
               </Flex>
               <Flex 
@@ -90,7 +123,7 @@ import {
                 </Box>
                 <Spacer />
                 <Box>
-                   219.9 kcal 
+                {getreceipsdet && getreceipsdet.data && getreceipsdet.data.nutritionInformation && getreceipsdet.data.nutritionInformation.carbohydrate}
                 </Box>
               </Flex>
               <Flex 
@@ -103,7 +136,7 @@ import {
                 </Box>
                 <Spacer />
                 <Box>
-                   219.9 kcal
+                {getreceipsdet && getreceipsdet.data && getreceipsdet.data.nutritionInformation && getreceipsdet.data.nutritionInformation.cholesterol}
                 </Box>
               </Flex>
             </Stack>
@@ -115,8 +148,7 @@ import {
                   color={useColorModeValue('gray.700', 'white')}
                   fontSize={'1xl'}
                   fontFamily={'body'}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna.
+                    {getreceipsdet && getreceipsdet.data && getreceipsdet.data.nutritionInformation && getreceipsdet.data.nutritionInformation.nutritionTitle}
                   </Text>
             </Stack>
           </Stack>
@@ -149,10 +181,8 @@ import {
                 fit={'cover'}
                 align={'center'}
                 w={'100%'}
-                h={'100%'}
-                src={
-                  'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-                }
+                h={'100%'}image
+                src={imagepath+"/"+(getreceipsdet && getreceipsdet.data && getreceipsdet.data.recipeId && getreceipsdet.data.recipeId.image)}
               />
             </Box>
           </Flex>
@@ -162,17 +192,7 @@ import {
                p={4}
               color={useColorModeValue('gray.700', 'white')}
               fontSize={'1xl'}
-              fontFamily={'body'}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna.
+              fontFamily={'body'}>{getreceipsdet && getreceipsdet.data && getreceipsdet.data.recipeId && getreceipsdet.data.recipeId.description}
               </Text>
         </Stack>
       </Container>
