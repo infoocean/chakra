@@ -14,8 +14,7 @@ export default function Aboutpage() {
       <RearchRecipes/>
       <Ourrecipes/>
       <Popularrecipes/>
-      <Search/>
-      <umysePagination/>
+      
 
     </>
   );

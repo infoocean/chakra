@@ -24,6 +24,7 @@ export default function RearchRecipes () {
   const [getallreceips, setgetallreceips] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     Getallrecipy();
   },[]);
 
@@ -113,8 +114,8 @@ export default function RearchRecipes () {
                                             rounded="lg"
                                             position="relative"
                                             role={'group'}
-                                            w={300}
-                                            h="180px"
+                                            w={230}
+                                            h="190px"
                                             bgGradient="linear(to-b, white.0, #ceeaed)" 
                                             boxShadow={'1xl'}
                                             pos={'relative'}
@@ -140,19 +141,19 @@ export default function RearchRecipes () {
                                                     filter: 'blur(20px)',
                                                     },
                                                 }} bg={'gray.100'}> 
-                                                <Image borderRadius='10%'  h="180px" objectFit={'cover'} w='full' src={imagepath + "/" + value.recipeId.image}  layout={'fill'} />
+                                                <Image borderRadius='10%'  w="100px" h="190px" objectFit={'cover'} w='full' src={imagepath + "/" + value.recipeId.image}  layout={'fill'} />
                                             </Box>
                                         </Box>
-                                        <Box p='3' pl={5}>
+                                        <Box p='3' pl={5} w={'500px'}>
                                             <Stack>
-                                                <Heading mb={2}
+                                                <Heading  mb={2}
                                                 color={useColorModeValue('gray.700', 'white')}
                                                 fontSize={{ base: '1xl', sm: '2xl', lg: 'xl' }}
                                                 >
                                             {value.recipeId.title}
                                                 </Heading>
-                                                <Text  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                                nonumy eirmod tempor invidunt ut labore et ea rebum.
+                                                <Text  >
+                                                {value.recipeId.description}
                                                 </Text>
                                             </Stack>
                                             <Stack mt={4}>

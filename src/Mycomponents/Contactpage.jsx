@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Formik, Field } from "formik";
+
 import {
   Container,
   Heading,
@@ -22,6 +23,10 @@ import Contactdelious from "./Contactcmp/Deliousrecip";
 
 export default function Contactpage() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[]);
+   
   return (
     <>
       <Container mt={6} mb={6} maxW="6xl">

@@ -27,6 +27,7 @@ export default function Recipesdetailspage() {
     const [getreceipsdet, setgetreceipsdet] = useState([]);
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         Getrecipydet();
     },[]);
 

@@ -11,6 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
+import { Link } from 'react-router-dom';
 
 const data = {
   imageURL:
@@ -66,46 +67,48 @@ export default function Ourrecipes() {
         {getallreceips.slice(0,9).map((value, key) => {
           if (key != 5) {
             return (
-              <Box id={key}
-                rounded="lg"
-                position="relative"
-                role={'group'}
-                w={'full'}
-                h="300px"
-                bgGradient="linear(to-b, white.0, #ceeaed)" 
-                borderRadius={'20px'}
-                pos={'relative'}
-                zIndex={1}>
-                  <Circle
-                    size="50px"
+              <Link to={`/getrecipesdetails/${value._id}`}>
+                <Box id={key}
+                  rounded="lg"
+                  position="relative"
+                  role={'group'}
+                  w={'full'}
+                  h="300px"
+                  bgGradient="linear(to-b, white.0, #ceeaed)" 
+                  borderRadius={'20px'}
+                  pos={'relative'}
+                  zIndex={1}>
+                    <Circle
+                      size="50px"
+                      position="absolute"
+                      top={3}
+                      right={2.5}
+                      bg="#ffffff"
+                    />
+                  <Box 
                     position="absolute"
-                    top={3}
-                    right={2.5}
-                    bg="#ffffff"
-                  />
-                <Box 
-                 position="absolute"
-                 top={25}
-                 right={25}
-                 color="#cc0000"
-                 fontSize='20px'
-                >
-                <i className="fa-solid fa-heart"></i>
-                </Box>
-                    <Image h="200px" borderRadius={'15px'} objectFit={'cover'} w='full' src={imagepath + "/" + value.recipeId.image} layout={'fill'} />
-                <Stack p={2} pt={4}>
-                    <Heading
-                      color={useColorModeValue('gray.700', 'white')}
-                      fontSize={'1xl'}
-                    >
-                      {value.recipeId.title}
-                    </Heading>
+                    top={25}
+                    right={25}
+                    color="#cc0000"
+                    fontSize='20px'
+                  >
+                  <i className="fa-solid fa-heart"></i>
+                  </Box>
+                      <Image h="200px" borderRadius={'15px'} objectFit={'cover'} w='full' src={imagepath + "/" + value.recipeId.image} layout={'fill'} />
+                  <Stack p={2} pt={4}>
+                      <Heading
+                        color={useColorModeValue('gray.700', 'white')}
+                        fontSize={'1xl'}
+                      >
+                        {value.recipeId.title}
+                      </Heading>
+                    </Stack>
+                    <Stack p={2}  direction={'row'} spacing={6} align={'center'}>
+                      <Text fontWeight={600}><i className="fa-solid fa-stopwatch"></i> {value.recipeId.prepTime} </Text>
+                      <Text fontWeight={600}><i className="fa-solid fa-utensils"></i>  {value.recipeId.categoryId.categoryName}</Text>
                   </Stack>
-                  <Stack p={2}  direction={'row'} spacing={6} align={'center'}>
-                    <Text fontWeight={600}><i className="fa-solid fa-stopwatch"></i> {value.recipeId.prepTime} </Text>
-                    <Text fontWeight={600}><i className="fa-solid fa-utensils"></i>  {value.recipeId.categoryId.categoryName}</Text>
-                </Stack>
-              </Box>
+                </Box>
+              </Link>
             );
           }else{
             return (
