@@ -29,7 +29,7 @@ export default function Recipesdetailspage() {
     useEffect(() => {
         window.scrollTo(0, 0)
         Getrecipydet();
-    },[]);
+    },[id]);
 
     function Getrecipydet() {
 
