@@ -232,7 +232,7 @@ export default function RearchRecipes () {
                                                             alt={'Author'}
                                                             />
                                                             <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-                                                          <Text fontWeight={600}>{value.recipeId && value.recipeId.userId && value.recipeId.userId.firstName +" "+ value.recipeId && value.recipeId.userId  && value.recipeId.userId.lastName}</Text>
+                                                          <Text fontWeight={600}>{(value.recipeId && value.recipeId.userId && value.recipeId.userId.firstName) +" "+ (value.recipeId && value.recipeId.userId  && value.recipeId.userId.lastName)}</Text>
                                                             </Stack>
                                                         </Stack>  
                                                         <Stack direction={'row'} spacing={4} align={'center'} 
@@ -352,6 +352,13 @@ export default function RearchRecipes () {
                     }
                     
                   })}
+                  <HStack align={'center'} pt={5}>
+                    <Button>1</Button>
+                    <Button>2</Button>
+                    <Button>3</Button>
+                    <Button>...</Button>
+                    <Button>)</Button>
+                  </HStack>
                 </Box>
                 <Flex
                 flex={1}
@@ -427,13 +434,6 @@ export default function RearchRecipes () {
                 </Box>
                 </Flex>
             </Stack>
-            <HStack pt={5}>
-                <Button>1</Button>
-                <Button>2</Button>
-                <Button>3</Button>
-                <Button>...</Button>
-                <Button>)</Button>
-            </HStack>
           </Container>
         </>
   ) ;
