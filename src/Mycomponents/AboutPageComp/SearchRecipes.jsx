@@ -1,7 +1,6 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-
 import {
   Container,
   Heading,
@@ -22,10 +21,12 @@ import { imagepath } from '../../Path/imgpath';
 
 export default function RearchRecipes () {
   const [getallreceips, setgetallreceips] = useState([]);
+  const [deleciesrecipy, setdeleciesrecipy] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     Getallrecipy();
+    Getalldeleciesrecipy();
   },[]);
 
   function Getallrecipy() {
@@ -44,8 +45,29 @@ export default function RearchRecipes () {
       console.log(error);
     });
 
-    console.log(getallreceips);
+    //console.log(getallreceips);
     //console.log(typeof(getallreceips));
+  }
+
+  function Getalldeleciesrecipy() {
+    const axios = require('axios');
+    const config = {
+      method: 'get',
+      url: 'https://foodielandnod.herokuapp.com/api/popularRecipes',
+      headers: { }
+    };
+
+    axios(config)
+    .then(function (response) {
+      //console.log(JSON.stringify(response.data));
+      setdeleciesrecipy(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    //console.log(deleciesrecipy);
+    //console.log(typeof(deleciesrecipy));
   }
 
     return (
@@ -97,7 +119,7 @@ export default function RearchRecipes () {
                 <Box flex={1} spacing={{ base: 5, md: 10 }} maxW="4xl">
                 {getallreceips.map((value, key) => {
                     return(
-                    <Link to={`/getrecipesdetails/${value._id}`}>
+                    <Link key={key} to={`/getrecipesdetails/${value._id}`}>
                     <Flex
                     flex={1}
                     id={key}
@@ -206,54 +228,61 @@ export default function RearchRecipes () {
                             fontSize={{ base: '2xl', sm: '3xl', lg: '4xl' }}>
                             Tasty recipes
                         </Heading>
-                            <Flex pt={10}>
-                                <Box 
-                                rounded="lg"
-                                position="relative"
-                                role={'group'}
-                                w={'full'}
-                                h="130px"
-                                bgGradient="linear(to-b, white.0, #ceeaed)" 
-                                boxShadow={'1xl'}
-                                pos={'relative'}
-                                zIndex={1}
-                            >
-                                <Box  
-                                rounded={'lg'}
-                                pos={'relative'}
-                                _after={{
-                                    transition: 'all .3s ease',
-                                    content: '""',
-                                    w: 'full',
-                                    h: 'full',
-                                    pos: 'absolute',
-                                    top: 5,
-                                    left: 0,
-                                    filter: 'blur(15px)',
-                                    zIndex: -1,
-                                }}
-                                _groupHover={{
-                                    _after: {
-                                    filter: 'blur(20px)',
-                                    },
-                                }} bg={'gray.100'}  maxW='400px' max="400px" > 
-                                <Image borderRadius='10%' h="130px" objectFit={'cover'} w='full'  layout={'fill'} />
-                                </Box>
-                                </Box>
-                                <Box p='2' mt={2}>
-                                    <Stack>
-                                    <Heading
-                                        color={useColorModeValue('gray.700', 'white')}
-                                        fontSize={{ base: '1xl', sm: '2xl', lg: 'md' }}
-                                    >
-                                    Chicken meatballs with creame cheese..
-                                    </Heading>
-                                    </Stack>
-                                    <Stack direction={'row'} spacing={4} pt={3}>
-                                    <Text fontSize={{ base: '1xl', sm: '2xl', lg: 'md' }} >By <b>Andresh Paula</b> </Text>
-                                    </Stack>
-                                </Box>
-                            </Flex>    
+                        {deleciesrecipy.map((value, key) => {
+                          return (
+                              <Link key={key} to={`/getrecipesdetails/${value._id}`}>
+                                <Flex id={key} pt={10}>
+                                  <Box 
+                                  rounded="lg"
+                                  position="relative"
+                                  role={'group'}
+                                  w={'full'}
+                                  h="130px"
+                                  width={'150px'}
+                                  bgGradient="linear(to-b, white.0, #ceeaed)" 
+                                  boxShadow={'1xl'}
+                                  pos={'relative'}
+                                  zIndex={1}
+                              >
+                                  <Box  
+                                  rounded={'lg'}
+                                  pos={'relative'}
+                                  _after={{
+                                      transition: 'all .3s ease',
+                                      content: '""',
+                                      w: 'full',
+                                      h: 'full',
+                                      pos: 'absolute',
+                                      top: 5,
+                                      left: 0,
+                                      filter: 'blur(15px)',
+                                      zIndex: -1,
+                                  }}
+                                  _groupHover={{
+                                      _after: {
+                                      filter: 'blur(20px)',
+                                      },
+                                  }} bg={'gray.100'}  maxW='400px' max="400px" > 
+                                  <Image borderRadius='10%'  width={'150px'} h="130px" objectFit={'cover'} w='full' src={imagepath + "/" + value.recipeId.image} layout={'fill'} />
+                                  </Box>
+                                  </Box>
+                                  <Box width={'200px'} p='2' mt={2}>
+                                      <Stack>
+                                      <Heading
+                                          color={useColorModeValue('gray.700', 'white')}
+                                          fontSize={{ base: 'sm', sm: '1xl', lg: 'md' }}
+                                      >
+                                      {value.recipeId.title}
+                                      </Heading>
+                                      </Stack>
+                                      <Stack direction={'row'} spacing={4} pt={3}>
+                                      <Text fontSize={{ base: '1xl', sm: '2xl', lg: 'md' }} >By <b>{value.recipeId.userId.firstName +" "+value.recipeId.userId.firstName}</b> </Text>
+                                      </Stack>
+                                  </Box>
+                                </Flex>    
+                              </Link>
+                            );
+                          })}
                         </Stack>
                     </Stack>
                 </Box>

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React from 'react';
 import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -15,7 +15,6 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
-import posterimg from '../../Assets/Images/poster1.jpeg';
 
 export default function Blogrecipelistcmp() {
 
@@ -23,6 +22,7 @@ export default function Blogrecipelistcmp() {
   const [deleciesrecipy, setdeleciesrecipy] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     Getallblogrecipy();
     Getalldeleciesrecipy();
   },[]);
@@ -43,8 +43,8 @@ export default function Blogrecipelistcmp() {
       console.log(error);
     });
 
-    console.log(getallblogreceips);
-    console.log(typeof(getallblogreceips));
+    //console.log(getallblogreceips);
+    //console.log(typeof(getallblogreceips));
 
   }
 
@@ -88,8 +88,8 @@ export default function Blogrecipelistcmp() {
                 <Stack pt={12}>
                 {getallblogreceips.map((value, key) => {
                   return(
-                    <Link to={`/getrecipesblogdetails/${value._id}`}>
-                      <Flex>
+                    <Link key={key} to={`/getrecipesblogdetails/${value._id}`}>
+                      <Flex id={key}>
                           <Box mb={5}
                               rounded="lg"
                               position="relative"
@@ -188,8 +188,8 @@ export default function Blogrecipelistcmp() {
                 </Heading>
                 {deleciesrecipy.map((value, key) => {
                   return (
-                    <Link to={`/getrecipesdetails/${value._id}`}>
-                      <Flex pt={10}>
+                    <Link key={key} to={`/getrecipesdetails/${value._id}`}>
+                      <Flex id={key} pt={10}>
                         <Box 
                         rounded="lg"
                         position="relative"

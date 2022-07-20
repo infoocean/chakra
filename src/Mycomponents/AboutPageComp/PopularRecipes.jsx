@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Heading,
@@ -13,12 +14,12 @@ import {
 } from '@chakra-ui/react';
 
 import { imagepath } from '../../Path/imgpath';
-import { Link } from 'react-router-dom';
 
 export default function Popularrecipes() {
   const [deleciesrecipy, setdeleciesrecipy] = useState([]);
   
   useEffect(() => {
+    window.scroll(0,0);
     Getalldeleciesrecipy();
   },[]);
 
@@ -39,7 +40,7 @@ export default function Popularrecipes() {
       console.log(error);
     });
 
-    console.log(deleciesrecipy);
+    //console.log(deleciesrecipy);
     //console.log(typeof(deleciesrecipy));
   }
 
@@ -63,7 +64,7 @@ export default function Popularrecipes() {
       <SimpleGrid mt={20} columns={[2, null, 4]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
-            <Link to={`/getrecipesdetails/${value._id}`}>
+            <Link key={key} to={`/getrecipesdetails/${value._id}`}>
               <Box 
                 id={key}
                 rounded="lg"

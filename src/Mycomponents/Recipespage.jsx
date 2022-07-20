@@ -17,6 +17,7 @@ import {
 import Blogpagerecips from './Receipspagecmp/Recipes';
 import { Inboxemail } from './Homepagecmp/Banner2';
 import { imagepath } from '../Path/imgpath';
+
 export default function Recipespage() {
 
   const [getallreceips, setgetallreceips] = useState([]);
@@ -44,7 +45,7 @@ export default function Recipespage() {
       console.log(error);
     });
 
-    console.log(getallreceips);
+    //console.log(getallreceips);
     //console.log(typeof(getallreceips));
   }
 
@@ -107,8 +108,8 @@ export default function Recipespage() {
                 <Stack pt={12}>
                 {getallreceips.map((value, key) => {
                   return(
-                    <Link to={`/getrecipesdetails/${value._id}`}>
-                      <Flex>
+                    <Link key={key} to={`/getrecipesdetails/${value._id}`}>
+                      <Flex id={key}>
                           <Box mb={5}
                               rounded="lg"
                               position="relative"
@@ -206,8 +207,8 @@ export default function Recipespage() {
                 </Heading>
                 {deleciesrecipy.map((value, key) => {
                   return (
-                    <Link to={`/getrecipesdetails/${value._id}`}>
-                      <Flex pt={10}>
+                    <Link key={key} to={`/getrecipesdetails/${value._id}`}>
+                      <Flex id={key} pt={10}>
                         <Box 
                         rounded="lg"
                         position="relative"

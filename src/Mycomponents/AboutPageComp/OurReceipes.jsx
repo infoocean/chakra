@@ -1,4 +1,5 @@
 import {React, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Container } from '@chakra-ui/react';
 import { SimpleGrid, Box } from '@chakra-ui/react';
 import posterimg from '../../Assets/Images/poster1.jpeg';
@@ -11,7 +12,6 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
-import { Link } from 'react-router-dom';
 
 const data = {
   imageURL:
@@ -22,6 +22,7 @@ export default function Ourrecipes() {
   const [getallreceips, setgetallreceips] = useState([]);
 
   useEffect(() => {
+    window.scroll(0,0);
     Getallrecipy();
   },[]);
 
@@ -67,7 +68,7 @@ export default function Ourrecipes() {
         {getallreceips.slice(0,9).map((value, key) => {
           if (key != 5) {
             return (
-              <Link to={`/getrecipesdetails/${value._id}`}>
+              <Link key={key} to={`/getrecipesdetails/${value._id}`}>
                 <Box id={key}
                   rounded="lg"
                   position="relative"

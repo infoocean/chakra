@@ -37,7 +37,7 @@ export default function Deleciesrecipy() {
       console.log(error);
     });
 
-    console.log(deleciesrecipy);
+    //console.log(deleciesrecipy);
     //console.log(typeof(deleciesrecipy));
   }
 
@@ -45,7 +45,7 @@ export default function Deleciesrecipy() {
       <SimpleGrid mt={20} columns={[2, null, 4]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
-              <Link to={`/getrecipesdetails/${value._id}`}>
+              <Link key={key} to={`/getrecipesdetails/${value._id}`}>
                 <Box 
                   id={key}
                   rounded="lg"

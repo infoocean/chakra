@@ -14,10 +14,8 @@ import posterimg from '../../Assets/Images/poster1.jpeg'
 import Contactdelioustdelious from '../Contactcmp/Deliousrecip';
 import { Inboxemail } from '../Homepagecmp/Banner2';
 
-
 export default function Blogpostpagedetails() {
 
-    
     useEffect(() => {
        window.scrollTo(0, 0);
       },[]);

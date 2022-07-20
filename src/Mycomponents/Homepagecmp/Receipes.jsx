@@ -1,11 +1,13 @@
-import {React, useState, useEffect } from 'react';
-import { Container } from '@chakra-ui/react';
-import { SimpleGrid, Box } from '@chakra-ui/react';
+import React from 'react';
+import {useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import {
   Circle,
+  Container,
   Image,
   useColorModeValue,
+  SimpleGrid, Box,
   Heading,
   Stack,
   Text,
@@ -60,7 +62,7 @@ export default function Myreceipies() {
         <SimpleGrid columns={[2, null, 3]} spacing="35px">
         {getallreceips.map((value, key) => {
             return (
-              <Link to={`/getrecipesdetails/${value._id}`}>
+              <Link key={key} to={`/getrecipesdetails/${value._id}`}>
                 <Box
                   id = {key}
                   rounded="lg"

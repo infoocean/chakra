@@ -33,7 +33,7 @@ export default function Categeries() {
     };
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        //console.log(JSON.stringify(response.data));
         setmycatdata(response.data);
       })
       .catch(function (error) {
@@ -65,9 +65,9 @@ export default function Categeries() {
       <SimpleGrid mt={6} columns={[3, null, 6]} spacing="20px">
           {mycatdata.map((value, key) => {
               return (
-              <Link to={`/ShowCategoriesByRecipes/${value._id}`}>
+              <Link  key={key} to={`/ShowCategoriesByRecipes/${value._id}`}>
                 <Box
-                  id={key}
+                  key={key}
                   role={'group'}
                   p={4}
                   w={'full'}

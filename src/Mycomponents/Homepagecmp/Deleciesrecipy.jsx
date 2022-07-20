@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Heading,
@@ -12,7 +13,6 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
-import { Link } from 'react-router-dom';
 
 export default function Deleciesrecipy() {
   const [deleciesrecipy, setdeleciesrecipy] = useState([]);
@@ -38,26 +38,12 @@ export default function Deleciesrecipy() {
       console.log(error);
     });
 
-    console.log(deleciesrecipy);
+    //console.log(deleciesrecipy);
     //console.log(typeof(deleciesrecipy));
   }
 
   return (
     <Container maxW="6xl" mt={20} mb={6}>
-      {/*<Flex>
-        <Box>
-          <Text fontSize="3xl" fontWeight="900">
-            Try this delicious recipes
-            <br/>
-            to make your day
-          </Text>
-        </Box>
-        <Spacer />
-        <Box>
-          <Text>Here is some paragraph.</Text>
-        </Box>
-      </Flex>
-      */}
         <Flex>
           <Heading w={540}>Try this delicious receipe<br/> to make your day</Heading>
           <Text w={540}>
@@ -69,8 +55,8 @@ export default function Deleciesrecipy() {
       <SimpleGrid mt={20} columns={[2, null, 4]} spacing="30px">
       {deleciesrecipy.map((value, key) => {
           return (
-            <Link to={`/getrecipesdetails/${value._id}`}>
-              <Box key={key}
+            <Link key={key} to={`/getrecipesdetails/${value._id}`}>
+              <Box id={key}
                 rounded="lg"
                 position="relative"
                 role={'group'}

@@ -34,7 +34,7 @@ export function Inboxemail() {
           body: 
           cnvtjson,
           }).then(function(response) {
-          console.log(response);
+          //console.log(response);
           if(response.status===200) {
             //console.log("success");
             alert("Thanks for Subcribe");
