@@ -21,6 +21,7 @@ export default function Categeries() {
   const[mycatdata , setmycatdata] = useState([]);
 
   useEffect(() => {
+    window.scroll(0,0);
     getAllCategory();
   },[]);
 

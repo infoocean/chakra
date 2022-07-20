@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Categeries from '../Mycomponents/Homepagecmp/Categaries';
 import Deleciesrecipy from '../Mycomponents/Homepagecmp/Deleciesrecipy';
 import Myreceipies from '../Mycomponents/Homepagecmp/Receipes';
@@ -9,6 +9,12 @@ import { Inboxemail } from './Homepagecmp/Banner2';
 
 
 export default function Homepage() {
+
+  useEffect(() => {
+    window.scroll(0,0);
+  },[]);
+
+
   return (
     <>
       {/*<Homepageslider />*/}
