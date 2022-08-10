@@ -1,29 +1,11 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Text,
-  Container,
-  useColorModeValue,
-  Heading,
-  Stack,
-  Image,
-  SimpleGrid,
-  Button,
-  Flex,
-  Spacer,
-  Box,
-} from '@chakra-ui/react';
+import {Text,Container,useColorModeValue,Heading,Stack,Image,SimpleGrid,Button,Flex,Spacer,Box,} from '@chakra-ui/react';
 import { imagepath } from '../../Path/imgpath';
 
 export default function Categeries() {
-
   const[mycatdata , setmycatdata] = useState([]);
-
-  useEffect(() => {
-    window.scroll(0,0);
-    getAllCategory();
-  },[]);
 
   function getAllCategory () {
     const axios = require('axios');
@@ -44,6 +26,11 @@ export default function Categeries() {
       //console.log(mycatdata);
       //console.log(typeof(mycatdata));
   };
+
+  useEffect(() => {
+    //window.scroll(0,0);
+    getAllCategory();
+  },[]);
 
   return (
     <Container mt={6} mb={6} maxW="6xl">
